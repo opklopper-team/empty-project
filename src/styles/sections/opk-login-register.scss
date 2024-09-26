@@ -1,0 +1,208 @@
+@import '../mixins.scss';
+@import '../variables.scss';
+
+.opk-login {
+    .head_title__text_bg {
+        justify-content: center;
+    }
+
+    &__container {
+        @include breakPoints($tablet, min) {
+            left: unset;
+            width: 100%;
+        }
+    }
+
+    &__form {
+        max-width: 595px;
+
+        @include breakPoints($tablet, min) {
+            padding-bottom: 80px;
+        }
+
+        @include breakPoints($tablet, max) {
+            padding-bottom: 42px;
+        }
+    }
+
+    .form-vertical {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        form {
+            width: 100%;
+            max-width: 550px;
+        }
+    }
+
+
+    &__title-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__title {
+        margin-bottom: 25px;
+        text-transform: uppercase;
+        font-family: $font_nexa;
+        font-weight: 900;
+        line-height: 1.4;
+        letter-spacing: -1px;
+
+        @include breakPoints($tablet, min) {
+            font-size: 47px;
+        }
+
+        @include breakPoints($tablet, max) {
+            font-size: 34px;
+        }
+    }
+
+    &__text {
+        margin: 0 !important;
+        color: $text_color;
+        text-align: center;
+        font-family: $font_nexa_bold;
+        font-weight: 700;
+
+        @include breakPoints($tablet, min) {
+            padding-bottom: 35px;
+            font-size: 22px;
+            line-height: 1.3;
+        }
+
+        @include breakPoints($tablet, max) {
+            padding-bottom: 42px;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    }
+
+    &__label {
+        color: $text_color;
+        font-family: $font_inter;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.55;
+
+        @include breakPoints($tablet, min) {
+            margin-bottom: 15px;
+        }
+
+        @include breakPoints($tablet, max) {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__label-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+
+        input {
+            margin: 0 !important;
+        }
+
+        @include breakPoints($tablet, max) {
+            display: block;
+        }
+    }
+
+    &__reset-label {
+        color: $text_color;
+        font-family: $font_inter;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.55;
+
+        @include breakPoints($tablet, min) {
+            margin-bottom: 15px;
+        }
+
+        @include breakPoints($tablet, max) {
+            margin-bottom: 32px;
+        }
+    }
+
+    &__button {
+        justify-content: center;
+        width: 100%;
+        padding: 13px 22px;
+        background-color: $blue;
+        color: $white;
+        text-align: center;
+        font-family: $font_inter;
+        font-size: 16px;
+        font-weight: 800;
+        line-height: 1.4;
+
+        @include breakPoints($tablet, min) {
+            margin-top: 20px;
+        }
+
+        @include breakPoints($tablet, max) {
+            margin-top: 8px;
+        }
+
+        &--secondary {
+            margin-top: 0;
+            text-align: center;
+            border: none;
+            background-color: transparent;
+            color: $orange;
+            font-weight: 500;
+
+            @include breakPoints($tablet, min) {
+                margin-bottom: 100px;
+            }
+
+            @include breakPoints($tablet, max) {
+                margin-bottom: 0;
+            }
+
+            span + svg {
+                margin-left: 5px;
+            }
+
+            &:not([disabled]):hover {
+                background-color: transparent;
+                color: $orange !important;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__buttons {
+        flex-direction: column;
+        margin-left: 0 !important;
+
+        @include breakPoints($tablet, min) {
+            gap: 22px;
+        }
+
+        @include breakPoints($tablet, max) {
+            gap: 10px;
+        }
+    }
+
+    &__texts {
+        padding-top: 35px;
+        color: $text_color;
+        font-family: $font_inter;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.55;
+
+        a {
+            margin: 0 !important;
+            color: $orange;
+            text-decoration: underline;
+        }
+
+        & > div {
+            padding-bottom: 10px;
+        }
+    }
+}

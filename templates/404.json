@@ -1,0 +1,20 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-404",
+      "settings": {
+        "title": "404",
+        "subtitle": "The page you’re looking for could not be found",
+        "text": "<p>Please make sure the web address is correct, or try going to<\/p>",
+        "button_1_text": "Homepage",
+        "button_1_link": "\/",
+        "button_2_text": "",
+        "button_2_link": "",
+        "show_social": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

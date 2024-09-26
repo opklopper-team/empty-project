@@ -1,0 +1,76 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "header_image": "shopify:\/\/shop_images\/contact_us.webp",
+        "image_overlay_color": "#000000",
+        "image_overlay_opacity": 8,
+        "show_breadcrumbs": true,
+        "show_page_content_checkbox": false
+      }
+    },
+    "index_icons_with_text_FBUCTe": {
+      "type": "index-icons-with-text",
+      "blocks": {
+        "block_XMkyWr": {
+          "type": "block",
+          "settings": {
+            "custom_icon": "star",
+            "image": "shopify:\/\/shop_images\/delivery.svg",
+            "title": "Let’s chat!",
+            "content": "<p>info@padel2gether.nl<\/p>",
+            "link": "mailto:info@padel2gether.nl"
+          }
+        },
+        "block_RTgG98": {
+          "type": "block",
+          "settings": {
+            "custom_icon": "star",
+            "image": "shopify:\/\/shop_images\/phone_5082440c-73f7-479c-a287-89a7d710b533.svg",
+            "title": "Reach us ny phone!",
+            "content": "<p>+31 0621490829 <\/p>",
+            "link": "tel:+31 0621490829"
+          }
+        },
+        "block_EMcX7M": {
+          "type": "block",
+          "settings": {
+            "custom_icon": "star",
+            "image": "shopify:\/\/shop_images\/location.svg",
+            "title": "Find us!",
+            "content": "<p>Hovenierstraat 100 in Naaldwijk<\/p>",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "block_XMkyWr",
+        "block_RTgG98",
+        "block_EMcX7M"
+      ],
+      "settings": {
+        "title": "Want to contact us?",
+        "subtitle": "",
+        "icon_color": "rgba(0,0,0,0)"
+      }
+    },
+    "page_contact_M6htww": {
+      "type": "page-contact",
+      "settings": {
+        "section_bg_color": "",
+        "section_color": "",
+        "bg_image_opacity": 70,
+        "section_title": "get in touch",
+        "subtitle": "",
+        "subheading": "<p>If you have any inquiries, please fill out the form below and we'll get back to you within 24 hours.<\/p>",
+        "button_style": "primary"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "index_icons_with_text_FBUCTe",
+    "page_contact_M6htww"
+  ]
+}

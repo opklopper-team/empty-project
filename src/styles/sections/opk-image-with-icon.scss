@@ -1,0 +1,21 @@
+@import '../mixins.scss';
+@import '../variables.scss';
+
+.icon-with-text--block_link {
+    flex-direction: column;
+    align-items: center;
+}
+
+.block_icon {
+    .icon-with-text--block_link:hover & {
+        box-shadow: 0 0 4px 2px $orange;
+    }
+}
+
+.block_info {
+    transition: color 0.3s ease;
+
+    .icon-with-text--block_link:hover & {
+        color: $orange;
+    }
+}

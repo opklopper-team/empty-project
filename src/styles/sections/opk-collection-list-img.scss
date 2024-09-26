@@ -1,0 +1,114 @@
+@import '../mixins.scss';
+@import '../variables.scss';
+
+.opk_collection_list_img {
+    .collection-list__slider {
+        margin-right: -10px;
+
+        @include breakPoints($tablet) {
+            margin-left: -1px;
+        }
+    }
+
+    .collection-list__slide {
+        padding-right: 10px;
+    }
+
+    .section-header-content {
+        max-width: 965px;
+    }
+
+    .head_title__text {
+        line-height: 0.94;
+        &:not(:last-child) {
+            @include breakPoints($tablet, min) {
+                margin-bottom: 25px;
+            }
+
+            @include breakPoints($tablet) {
+                margin-bottom: 35px;
+            }
+        }
+
+        @include breakPoints($tablet) {
+            font-size: 34px;
+        }
+    }
+
+    .head_title__shadow {
+        line-height: 0.94;
+        @include breakPoints($tablet) {
+            font-size: 34px;
+        }
+    }
+
+    .image_style_circle .collection-grid-item img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .collection-grid-item__title.h4 {
+        font-size: 26px;
+        font-weight: 700;
+        font-family: $font_nexa_bold, sans-serif;
+    }
+
+    .flickity-viewport {
+        overflow: visible;
+    }
+
+    .section_content.carousel_section_content {
+        top: 0;
+        margin: 0;
+
+        @include breakPoints($tablet, min) {
+            padding-top: 162px;
+        }
+
+        @include breakPoints($tablet) {
+            padding-top: 30px;
+        }
+    }
+
+    .section_bg {
+        height: calc(100% - 100px);
+    }
+
+    .section-header .slider_custom_arrows {
+        margin-top: 28px;
+    }
+
+    .section-header {
+        @include breakPoints($tablet) {
+            margin-bottom: 80px;
+        }
+    }
+
+    .collection-grid-item {
+        padding: 50px 20px;
+
+        @include breakPoints($tablet) {
+            height: auto !important;
+        }
+    }
+
+    .bg_image_with_custom_content {
+        margin-bottom: 0;
+    }
+
+    & {
+        margin-bottom: 0;
+    }
+}
+
+.collection-list__btn {
+    &.btn--secondary {
+        background-color: $orange !important;
+        color: $white;
+        border-color: $orange !important;
+
+        &:after {
+            background-color: $dark_orange !important;
+        }
+    }
+}

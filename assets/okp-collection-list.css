@@ -1,0 +1,97 @@
+/*!***************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/styles/sections/opk-featured-products.scss ***!
+  \***************************************************************************************************************************************************************************************************************/
+/* ==================================================== ADAPTIVE =================================================== */
+/* ==================================================== LAYOUTS ==================================================== */
+/* ===================================================== FONTS ===================================================== */
+/* ===================================================== COLORS ==================================================== */
+.opk_featured_products .product-item-block {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.opk_featured_products .product-item__price_and_reviews_row {
+  flex: auto;
+}
+.opk_featured_products .product-card__image-wrapper div {
+  padding: 0 !important;
+}
+.opk_featured_products .open-quick-view--btn {
+  width: 100%;
+  display: inline-flex !important;
+}
+.opk_featured_products .product-card-wrapper {
+  padding-bottom: 40px;
+}
+
+@media screen and (min-width: 750px) {
+  .opk_featured_products__head:not(:last-child) {
+    margin-bottom: 72px;
+  }
+}
+@media screen and (max-width: 749px) {
+  .opk_featured_products__head:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+.opk_featured_products__head_title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.opk_featured_products__subtitle {
+  display: inline-flex;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  color: #FB5F1B;
+  letter-spacing: -0.25px;
+  text-transform: uppercase;
+}
+.opk_featured_products__subtitle::before {
+  content: "";
+  color: inherit;
+  height: 2px;
+  width: 25px;
+  margin-right: 7px;
+  display: block;
+  background-color: #FB5F1B;
+}
+@media screen and (min-width: 750px) {
+  .opk_featured_products__subtitle:not(:last-child) {
+    margin: 0 0 6px;
+  }
+}
+@media screen and (max-width: 749px) {
+  .opk_featured_products__subtitle:not(:last-child) {
+    margin: 0 0 20px;
+  }
+}
+
+.opk_featured_products__head_wrap {
+  flex: auto;
+}
+
+.opk_featured_products__controls {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  height: auto;
+}
+.opk_featured_products__controls .swiper-button-lock {
+  display: none;
+}
+
+@media screen and (max-width: 749px) {
+  .opk_featured_products__slider.swiper {
+    overflow: visible;
+  }
+}
+
+.opk_featured_products__slider_item.swiper-slide {
+  height: auto;
+}

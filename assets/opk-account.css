@@ -1,0 +1,257 @@
+/*!*****************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/styles/sections/opk-account.scss ***!
+  \*****************************************************************************************************************************************************************************************************/
+/* ==================================================== ADAPTIVE =================================================== */
+/* ==================================================== LAYOUTS ==================================================== */
+/* ===================================================== FONTS ===================================================== */
+/* ===================================================== COLORS ==================================================== */
+.opk-account {
+  position: relative;
+  min-height: 40vh;
+}
+@media screen and (max-width: 749px) {
+  .opk-account {
+    padding: 32px 0;
+  }
+}
+@media screen and (min-width: 750px) {
+  .opk-account {
+    padding: 85px 0;
+  }
+}
+.opk-account__page-limiter {
+  max-width: 1400px;
+}
+.opk-account__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fb5f1b;
+}
+@media screen and (max-width: 749px) {
+  .opk-account__header-wrapper {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 750px) {
+  .opk-account__header-wrapper {
+    margin-bottom: 50px;
+  }
+}
+.opk-account__navigation-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+  border: none;
+  color: #fb5f1b;
+  background-color: transparent;
+}
+.opk-account__accent-title {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+@media screen and (max-width: 749px) {
+  .opk-account__accent-title {
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 750px) {
+  .opk-account__accent-title {
+    font-size: 28px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .opk-account__accent-title {
+    font-size: 32px;
+  }
+}
+.opk-account__accent-title--line {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #cccccc;
+}
+.opk-account__text {
+  padding-top: 25px;
+  color: #232323;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.55;
+}
+.opk-account__content-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 1199px) {
+  .opk-account__content-wrapper {
+    gap: 42px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .opk-account__content-wrapper {
+    display: grid;
+    grid-template-columns: auto minmax(30%, 410px);
+    grid-gap: 30px;
+    gap: 30px;
+  }
+}
+.opk-account__orders-history {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.opk-account__orders-history--empty {
+  justify-content: center;
+  align-items: center;
+  min-height: 20vh;
+}
+.opk-account__empty-title {
+  font-size: 25px;
+  text-align: center;
+}
+.opk-account__orders-list {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 749px) {
+  .opk-account__orders-list {
+    gap: 24px;
+  }
+}
+@media screen and (min-width: 750px) {
+  .opk-account__orders-list {
+    gap: 17px;
+  }
+}
+.opk-account__order-item, .opk-account__order-guide {
+  display: grid;
+  grid-gap: 20px;
+  gap: 20px;
+  width: 100%;
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: 24px;
+}
+@media screen and (min-width: 750px) {
+  .opk-account__order-item, .opk-account__order-guide {
+    grid-template-columns: repeat(5, 1fr);
+    padding-bottom: 17px;
+  }
+}
+@media screen and (max-width: 749px) {
+  .opk-account__order-guide {
+    display: none;
+  }
+}
+.opk-account__order-values {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  width: 100%;
+}
+@media screen and (min-width: 750px) {
+  .opk-account__order-values {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
+    gap: 20px;
+  }
+}
+.opk-account__order-parameter {
+  display: grid;
+  grid-gap: 20px;
+  gap: 20px;
+  align-items: center;
+}
+@media screen and (max-width: 749px) {
+  .opk-account__order-parameter {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 750px) {
+  .opk-account__order-parameter:first-child .opk-account__order-parameter-value {
+    text-align: left;
+  }
+  .opk-account__order-parameter:last-child .opk-account__order-parameter-value {
+    text-align: right;
+  }
+}
+.opk-account__order-parameter-title {
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 19.5px;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 749px) {
+  .opk-account__order-parameter-title {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 750px) {
+  .opk-account__order-parameter-title {
+    text-align: center;
+  }
+  .opk-account__order-parameter-title:not(.opk-account__order-parameter-title--main) {
+    display: none;
+  }
+}
+.opk-account__order-parameter-title:first-child {
+  text-align: left;
+}
+.opk-account__order-parameter-title:last-child {
+  text-align: right;
+}
+.opk-account__order-parameter-value {
+  font-family: "Inter";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: -1px;
+  text-align: right;
+}
+@media screen and (min-width: 750px) {
+  .opk-account__order-parameter-value {
+    text-align: center;
+  }
+}
+.opk-account__sidebar {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 12px;
+}
+.opk-account__sidebar-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0 !important;
+  border: none !important;
+  background-color: #ffffff;
+}
+@media screen and (max-width: 749px) {
+  .opk-account__sidebar-item {
+    padding: 20px !important;
+    border-radius: 20px;
+  }
+}
+@media screen and (min-width: 750px) {
+  .opk-account__sidebar-item {
+    padding: 30px !important;
+    border-radius: 50px;
+  }
+}
+.opk-account__button {
+  width: 100%;
+  margin: 30px 0 0 0 !important;
+  padding: 13px 22px;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.4;
+  background-color: #2460a9;
+  color: #ffffff;
+}

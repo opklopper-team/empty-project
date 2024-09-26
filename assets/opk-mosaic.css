@@ -1,0 +1,56 @@
+/*!****************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/styles/sections/opk-mosaic.scss ***!
+  \****************************************************************************************************************************************************************************************************/
+/* ==================================================== ADAPTIVE =================================================== */
+/* ==================================================== LAYOUTS ==================================================== */
+/* ===================================================== FONTS ===================================================== */
+/* ===================================================== COLORS ==================================================== */
+@media screen and (min-width: 750px) {
+  .opk_mosaic .section-header {
+    margin-bottom: 66px;
+  }
+}
+.opk_mosaic .mosaic_block {
+  border-radius: 20px;
+}
+.opk_mosaic .h3 {
+  font-size: 32px;
+  line-height: 1;
+}
+@media screen and (max-width: 749px) {
+  .opk_mosaic .mosaic_block-caption.text-center {
+    justify-content: flex-end;
+  }
+}
+.opk_mosaic .h3,
+.opk_mosaic .h4 {
+  font-size: 22px;
+  line-height: 1;
+}
+@media screen and (min-width: 750px) {
+  .mosaic_section_wrapper:not(:last-child) {
+    margin-bottom: 82px;
+  }
+}
+@media screen and (max-width: 749px) {
+  .mosaic_section_wrapper:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+
+.opk_mosaic__btn_wrap {
+  text-align: center;
+  padding: 0 22px;
+}
+
+.opk_mosaic__btn {
+  background-color: #fb5f1b;
+  min-width: 260px;
+  justify-content: center;
+}
+.opk_mosaic__btn::after {
+  background-color: #bf3b00;
+}
+.opk_mosaic__btn.btn:not([disabled]):hover {
+  background-color: #bf3b00;
+}

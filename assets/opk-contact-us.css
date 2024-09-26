@@ -1,0 +1,124 @@
+/*!********************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/styles/sections/opk-contact-us.scss ***!
+  \********************************************************************************************************************************************************************************************************/
+/* ==================================================== ADAPTIVE =================================================== */
+/* ==================================================== LAYOUTS ==================================================== */
+/* ===================================================== FONTS ===================================================== */
+/* ===================================================== COLORS ==================================================== */
+@media screen and (max-width: 749px) {
+  .template-page .shopify-section + .shopify-section:not(.shopify-section-header).page-contact-section {
+    padding-bottom: 75px;
+  }
+}
+@media screen and (max-width: 749px) {
+  .template-page .shopify-section + .shopify-section:not(.shopify-section-header).page-contact-section {
+    padding-bottom: 30px;
+  }
+}
+.template-page .rich-text {
+  padding: 0;
+}
+.template-page .custom_page_header_section {
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 750px) {
+  .template-page .custom_page_header_section {
+    margin-bottom: 85px;
+  }
+}
+.template-page [data-section-type=index-icons-with-text] {
+  padding: 0;
+}
+@media screen and (min-width: 750px) {
+  .template-page [data-section-type=index-icons-with-text] .icon-with-text--block {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.template-page [data-section-type=index-icons-with-text] .section-header h2 {
+  justify-content: center;
+}
+@media screen and (min-width: 750px) {
+  .template-page [data-section-type=index-icons-with-text] .block_icon {
+    margin: 0 0 30px 0;
+  }
+}
+.template-page [data-section-type=index-icons-with-text] .block_info {
+  text-align: center;
+}
+.template-page [data-section-type=index-icons-with-text] .block_info .h4 {
+  padding-right: 0;
+  font-family: "Nexa Bold", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26px;
+}
+.template-page [data-section-type=index-icons-with-text] .block_info .block_content {
+  border: none;
+  padding-top: 0;
+  margin-top: 8px;
+}
+.template-page [data-section-type=index-icons-with-text] .block_info .block_content p {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5; /* 150% */
+  letter-spacing: -1px;
+  color: #8d8d8d;
+  opacity: 1;
+}
+.template-page .page-contact-section .section-header {
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 750px) {
+  .template-page .page-contact-section .section-header {
+    margin-bottom: 55px;
+  }
+}
+.template-page .page-contact-section .section-header .h2 {
+  font-family: "NexaRustSlab", sans-serif;
+  font-size: 34px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  color: #2460a9;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 1200px) {
+  .template-page .page-contact-section .section-header .h2 {
+    font-size: 47px;
+  }
+}
+.template-page .page-contact-section .section-header .rte p {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: -1px;
+  color: #000000;
+}
+@media screen and (min-width: 1200px) {
+  .template-page .page-contact-section .section-header .rte p {
+    font-size: 18px;
+  }
+}
+.template-page .page-contact-section .form-vertical input:not([type=submit]),
+.template-page .page-contact-section .form-vertical textarea {
+  margin-bottom: 24px;
+}
+@media screen and (min-width: 750px) {
+  .template-page .page-contact-section .form-vertical input:not([type=submit]),
+  .template-page .page-contact-section .form-vertical textarea {
+    margin-bottom: 11px;
+  }
+}
+.template-page .page-contact-section .form-vertical label {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+.template-page .contact-form .btn {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+}

@@ -1,0 +1,225 @@
+<link rel="stylesheet" href="{{ 'opk-order.css' | asset_url }}" type="text/css">
+
+{% assign header_image = settings.customer_header_image %}
+{% assign header_heading = 'customer.account.title' | t %}
+{% assign show_breadcrumbs = settings.show_customer_breadcrumbs %}
+{% assign show_heading = settings.show_customer_heading %}
+
+{% assign image_overlay_color = settings.customer_image_overlay_color %}
+{% assign image_overlay_opacity = settings.customer_image_overlay_opacity %}
+
+{% if header_image != blank %}
+    {% render 'custom_page_header' image: header_image, heading: header_heading, show_breadcrumbs: show_breadcrumbs, show_heading: show_heading, image_overlay_color: image_overlay_color, image_overlay_opacity: image_overlay_opacity %}
+{% endif %}
+
+<section id="section-{{ section.id }}" data-section-id="{{ section.id }} opk-order">
+    <div class="page-width-small opk-order__page-limiter">
+        <div class="section-header text-left opk-order__header">
+            {% if show_breadcrumbs and header_image == blank %}
+                <div class='account-breadcrumbs'>
+                    <ol class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link"
+                               href="{{ routes.root_url }}">{{ 'general.breadcrumbs.home' | t }}</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <span>{{ 'customer.order.title' | t: name: order.name }}</span>
+                        </li>
+                    </ol>
+                </div>
+            {% endif %}
+
+            {% if show_heading and header_image == blank %}
+                <h1 class="text-center h3 opk-order__title head_title__text_bg head_title__word">{{ 'customer.account.title' | t }}</h1>
+            {% endif %}
+
+
+            <span class='return_with_icon_link__row'>
+            <a href="{{ routes.account_url }}" class='link--primary return_with_icon_link  opk-order__navigation-item'>
+              {% render 'icon' with 'tail-left' %}
+              <span> {{ 'customer.account.return' | t }}</span>
+            </a>
+      </span>
+        </div>
+
+        <div class="grid myaccount opk-order__content-wrapper">
+            <div class="grid__item myaccount__order-history opk-order__orders-history">
+                <h4 class="opk-order__accent-title">{{ 'customer.order.title' | t: name: order.name }}</h4>
+
+                {%- if order.cancelled -%}
+                    <div class="order--cancelled">
+                        {%- assign cancelled_at = order.cancelled_at | time_tag: format: "date_at_time" -%}
+                        <p>{{ 'customer.order.cancelled_html' | t: date: cancelled_at }}</p>
+                        <p>{{ 'customer.order.cancelled_reason' | t: reason: order.cancel_reason_label }}</p>
+                    </div>
+                {%- endif -%}
+
+                <table class="order-table opk-order__orders-list">
+                    <div class="opk-order__order-guide">
+                        <span class="opk-order__order-parameter-title opk-order__order-parameter-title--main">{{ section.settings.first_marker_title }}</span>
+                        <span class="opk-order__order-parameter-title opk-order__order-parameter-title--main">{{ section.settings.second_marker_title }}</span>
+                        <span class="opk-order__order-parameter-title opk-order__order-parameter-title--main">{{ section.settings.third_marker_title }}</span>
+                        <span class="opk-order__order-parameter-title opk-order__order-parameter-title--main">{{ section.settings.fourth_marker_title }}</span>
+                        <span class="opk-order__order-parameter-title opk-order__order-parameter-title--main">{{ section.settings.fifth_marker_title }}</span>
+                        <span class="opk-order__order-parameter-title opk-order__order-parameter-title--main">{{ section.settings.sixth_marker_title }}</span>
+                    </div>
+
+                    {% for line_item in order.line_items %}
+                        <div class="opk-order__order-item">
+                            <div class="opk-order__order-parameter">
+                                <span class="opk-order__order-parameter-title">{{ section.settings.first_marker_title }}</span>
+                                <a href="{{ line_item.product_id }}"
+                                   aria-label="{{ 'customer.orders.order_number_link' | t: number: line_item.url }}"
+                                   class="opk-order__order-parameter-value">{{ line_item.title | strip_html }}</a>
+                            </div>
+                            <div class="opk-order__order-parameter">
+                                <span class="opk-order__order-parameter-title">{{ section.settings.second_marker_title }}</span>
+                                <span data-label="{{ 'customer.orders.payment_status' | t }}"
+                                      class="opk-order__order-parameter-value">
+                                    {% if line_item.sku != blank %}
+                                        {{ line_item.sku }}
+
+                                    {% else %}
+                                        -
+                                    {% endif %}
+
+                                </span>
+                            </div>
+                            <div class="opk-order__order-parameter">
+                                <span class="opk-order__order-parameter-title">{{ section.settings.third_marker_title }}</span>
+                                <span data-label="{{ 'customer.orders.date' | t }}"
+                                      class="opk-order__order-parameter-value">{{ order.created_at | time_tag: format: 'abbreviated_date' }}</span>
+                            </div>
+                            <div class="opk-order__order-parameter">
+                                <span class="opk-order__order-parameter-title">{{ section.settings.fourth_marker_title }}</span>
+                                <span data-label="{{ 'customer.orders.total' | t }}"
+                                      class="opk-order__order-parameter-value">
+                                            {% if settings.currency_code_enable %}
+                                                {{ line_item.price | money_with_currency }}
+                                            {% else %}
+                                                {{ line_item.price | money }}
+                                            {% endif %}
+                                        </span>
+                            </div>
+                            <div class="opk-order__order-parameter">
+                                <span class="opk-order__order-parameter-title">{{ section.settings.fifth_marker_title }}</span>
+                                <span data-label="{{ 'customer.orders.date' | t }}"
+                                      class="opk-order__order-parameter-value">{{ line_item.quantity }}</span>
+                            </div>
+                            <div class="opk-order__order-parameter">
+                                <span class="opk-order__order-parameter-title">{{ section.settings.sixth_marker_title }}</span>
+                                <span data-label="{{ 'customer.orders.total' | t }}"
+                                      class="opk-order__order-parameter-value">
+                                            {% if settings.currency_code_enable %}
+                                                {{ line_item.final_price | money_with_currency }}
+                                            {% else %}
+                                                {{ line_item.final_price | money }}
+                                            {% endif %}
+                                        </span>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </table>
+            </div>
+
+            <div class="grid__item myaccount__account-details opk-order__sidebar">
+                <div class="opk-order__sidebar-item">
+                    <h4 class="opk-order__accent-title opk-order__accent-title--line">{{ 'customer.order.billing_address' | t }}</h4>
+
+                    <p class="opk-order__text"><strong>{{ 'customer.order.payment_status' | t }}
+                            :</strong> <span
+                                class="opk-order__payment-status-marker"> {{ order.financial_status_label }}</span>
+                    </p>
+
+                    {% if order.billing_address.street != blank or order.billing_address.city != blank or order.billing_address.zip != blank %}
+                        <p class="opk-order__text">
+                            {% if order.billing_address.street != blank %}{{ order.billing_address.street }},{% endif %}
+                            {% if order.billing_address.city != blank %}{{ order.billing_address.city }},{% endif %}
+                            {% if order.billing_address.zip != blank %}{{ order.billing_address.zip }}{% endif %}
+                        </p>
+                    {% endif %}
+
+                    {% if customer.default_address.country != blank %}
+                        <h5 class="opk-order__text">
+                            {{ customer.default_address.country }}{% if customer.default_address.zip != blank %}{% endif %}
+                        </h5>
+                    {% endif %}
+                </div>
+
+                <div class="opk-order__sidebar-item">
+                    <h4 class="opk-order__accent-title opk-order__accent-title--line">Cost</h4>
+
+                    <div class="opk-order__cost-info">
+                        <div class="opk-order__cost-item">
+                            <div class="opk-order__cost-title">Subtotal:</div>
+                            <div class="opk-order__cost-value">{{ order.subtotal_price | money }}</div>
+                        </div>
+                        <div class="opk-order__cost-item">
+                            <div class="opk-order__cost-title">
+                                <span>Shipping:</span>
+                                <span class="opk-order__cost-subtitle">(Shop location)</span>
+                            </div>
+                            <div class="opk-order__cost-value">{{ order.shipping_price | money }}</div>
+                        </div>
+                        <div class="opk-order__cost-item">
+                            <div class="opk-order__cost-title">Total:</div>
+                            <div class="opk-order__cost-value">{{ order.total_price | money }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="module" src="{{ 'opk-order.js' | asset_url }}"></script>
+
+{% schema %}
+{
+  "name": "t:sections.main-order.name",
+  "settings": [
+    {
+      "type": "text",
+      "id": "first_marker_title",
+      "label": "First marker title",
+      "default": "product"
+    },
+    {
+      "type": "text",
+      "id": "second_marker_title",
+      "label": "Second marker title",
+      "default": "sku"
+    },
+    {
+      "type": "text",
+      "id": "third_marker_title",
+      "label": "Third marker title",
+      "default": "Date"
+    },
+    {
+      "type": "text",
+      "id": "fourth_marker_title",
+      "label": "Fourth marker title",
+      "default": "Price"
+    },
+    {
+      "type": "text",
+      "id": "fifth_marker_title",
+      "label": "Fifth marker title",
+      "default": "Quantity"
+    },
+    {
+      "type": "text",
+      "id": "sixth_marker_title",
+      "label": "Sixth marker title",
+      "default": "Total"
+    }
+  ]
+}
+{% endschema %}
+
+
+
+
+
+

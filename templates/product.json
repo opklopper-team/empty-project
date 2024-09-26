@@ -1,0 +1,149 @@
+{
+  "sections": {
+    "main": {
+      "type": "product-template",
+      "blocks": {
+        "11795adc-1afa-4833-a193-258f495901ef": {
+          "type": "sku_block",
+          "settings": {
+          }
+        },
+        "75a9b1b6-630e-4615-99ce-f30bbec6ea5e": {
+          "type": "product_title",
+          "settings": {
+          }
+        },
+        "59b9a8d1-5bd8-4ed8-92e9-5854a801f774": {
+          "type": "rating",
+          "settings": {
+          }
+        },
+        "0471109f-c130-454e-a9ba-c56412cc11f3": {
+          "type": "product_vendor",
+          "settings": {
+          }
+        },
+        "220d69e9-8c2a-43b9-9363-ffbe33aba185": {
+          "type": "product_price",
+          "settings": {
+          }
+        },
+        "b3ed0838-9ce6-4da4-a82b-0e9de5caa879": {
+          "type": "product_options_block",
+          "settings": {
+            "show_product_swatches": true,
+            "use_variant_image_for_swatches": true
+          }
+        },
+        "0ddb7349-1bf6-4352-af41-583159a4e2fe": {
+          "type": "quantity_block",
+          "settings": {
+          }
+        },
+        "inventory_qty_UNbrkH": {
+          "type": "inventory_qty",
+          "settings": {
+            "low_inventory_threshold": 1
+          }
+        },
+        "8e2ecb36-9fd8-4b5d-8561-c11f4d549609": {
+          "type": "product_buttons",
+          "settings": {
+            "enable_payment_button": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "a6857d85-dbb6-41d1-9501-c01cf5bbe11f": {
+          "type": "back_in_stock",
+          "settings": {
+          }
+        },
+        "local_pickup_YNJ9dV": {
+          "type": "local_pickup",
+          "settings": {
+          }
+        },
+        "usp_items_HTcwNq": {
+          "type": "usp_items",
+          "settings": {
+            "icon_by_image_1": "shopify:\/\/shop_images\/noun-fast-3845674_1.svg",
+            "text_1": "Delivery within 2 working days",
+            "icon_by_image_2": "shopify:\/\/shop_images\/Background_Shadow.svg",
+            "text_2": "Easier returns",
+            "icon_by_image_3": "shopify:\/\/shop_images\/Background_Shadow_1.svg",
+            "text_3": "P2G has a 4.5 star"
+          }
+        },
+        "complementary_4K8mNG": {
+          "type": "complementary",
+          "settings": {
+            "block_heading": "You might like these...",
+            "product_list_limit": 3,
+            "products_per_page": 3,
+            "enable_quick_add": true
+          }
+        },
+        "collapsible_tab_desc_x49Kdt": {
+          "type": "collapsible_tab_desc",
+          "settings": {
+            "heading": "Product Details",
+            "expanded_by_default": false
+          }
+        },
+        "collapsible_tab_reviews_XDkhJT": {
+          "type": "collapsible_tab_reviews",
+          "settings": {
+            "heading": "Reviews"
+          }
+        },
+        "show_share_buttons_LiTer9": {
+          "type": "show_share_buttons",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "11795adc-1afa-4833-a193-258f495901ef",
+        "75a9b1b6-630e-4615-99ce-f30bbec6ea5e",
+        "59b9a8d1-5bd8-4ed8-92e9-5854a801f774",
+        "0471109f-c130-454e-a9ba-c56412cc11f3",
+        "220d69e9-8c2a-43b9-9363-ffbe33aba185",
+        "b3ed0838-9ce6-4da4-a82b-0e9de5caa879",
+        "0ddb7349-1bf6-4352-af41-583159a4e2fe",
+        "inventory_qty_UNbrkH",
+        "8e2ecb36-9fd8-4b5d-8561-c11f4d549609",
+        "a6857d85-dbb6-41d1-9501-c01cf5bbe11f",
+        "local_pickup_YNJ9dV",
+        "usp_items_HTcwNq",
+        "complementary_4K8mNG",
+        "collapsible_tab_desc_x49Kdt",
+        "collapsible_tab_reviews_XDkhJT",
+        "show_share_buttons_LiTer9"
+      ],
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_pick_an_option": false,
+        "enable_linked_options": false,
+        "enabled_mobile_sticky_btns": true,
+        "media_size": "medium",
+        "enable_image_zoom": true,
+        "enable_video_looping": true,
+        "thumbnails_type": "grid",
+        "thumbnails_size": 4
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "show_product_recommendations": true,
+        "grid_mobile": "2",
+        "heading": "You   may also like",
+        "show_vendor": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product-recommendations"
+  ]
+}

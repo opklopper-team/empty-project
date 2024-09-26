@@ -1,0 +1,33 @@
+<style>
+    .head_title__word::before {        
+        background: url('{{ 'text_bg.svg' | asset_url }}') repeat left/cover;        
+    }
+
+    .head_title__word::after {
+        background: url('{{ 'text_bg_right.svg' | asset_url }}') no-repeat right/contain;        
+    }
+</style>
+
+{% if medium == true %}
+    {% assign sizeClassShadow = 'head_title__shadow--medium' %}
+    {% assign sizeClassTitle = 'head_title__text--medium' %}
+{% else %}
+    {% assign sizeClassShadow = '' %}    
+    {% assign sizeClassTitle = '' %}    
+{% endif %}
+
+
+{% if bg_mod %}
+    {% if textMode %}
+        <div class="head_title__text_bg head_title__text_bg--font_mod js-head-title">{{ title }}</div>
+    {% else %}
+        <h2 class="head_title__text_bg js-head-title">{{ title }}</h2>              
+    {% endif %}
+{% else %} 
+    <h2 class="head_title__text {{ sizeClassTitle }} {% if textMode %} head_title__text--font_mod {% endif %}">
+        {{ title }}
+        <div class="head_title__shadow {{ sizeClassShadow }}">{{ title }}</div>
+    </h2>  
+{% endif %}
+
+

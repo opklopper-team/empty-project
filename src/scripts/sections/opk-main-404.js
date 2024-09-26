@@ -1,0 +1,1 @@
+import '../../styles/sections/opk-main-404.scss';

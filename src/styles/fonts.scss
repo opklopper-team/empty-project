@@ -1,0 +1,6 @@
+@import './mixins.scss';
+
+@include font_face('NexaRustSans-Trial-BlackShadow1', 'NexaRustSlab', 900);
+@include font_face('NexaRustSans-Trial-Black2', 'NexaRustBlack', 900);
+@include font_face('NexaRustSans-Trial-Shadow', 'NexaRustBlackShadow', 900);
+@include font_face('NexaText-Trial-Bold', 'Nexa Bold', 700);

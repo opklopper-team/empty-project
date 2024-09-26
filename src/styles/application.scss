@@ -1,0 +1,68 @@
+/* ==================================================== IMPORTS ==================================================== */
+//application
+@import './variables.scss';
+@import './normalize.scss';
+@import './fonts.scss';
+@import './typography.scss';
+@import './snippets/cart-popup.scss';
+
+/* ====================================================== ROOT ===================================================== */
+// :root {
+
+// }
+
+/* ===================================================== COMMON ==================================================== */
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex: 0 0 auto;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+}
+
+.section-header,
+.section-header.homepage_subtitle_style_match_header {
+    .h5 {
+        font-family: $font_inter;
+        font-size: 14px;
+        font-weight: 800;
+        color: $orange;
+        letter-spacing: -0.25px;
+        text-transform: uppercase;
+    }
+}
+
+.btn--circle-arrow {
+    background-color: $white;
+    
+    &:after {
+        background-color: $orange;
+    }
+}
+
+.btn {
+    span {
+        white-space: nowrap;
+    }
+}
+
+#BackToTop {
+    right: 25px;
+    bottom: 100px;
+}

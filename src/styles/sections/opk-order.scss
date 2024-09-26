@@ -1,0 +1,318 @@
+@import '../mixins.scss';
+@import '../variables.scss';
+
+.opk-order {
+    position: relative;
+    min-height: 40vh;
+
+    @include breakPoints($tablet, max) {
+        padding: 32px 0;
+    }
+
+    @include breakPoints($tablet, min) {
+        padding: 85px 0;
+    }
+
+    &__page-limiter {
+        max-width: 1400px;
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: $orange;
+    }
+
+    &__navigation-item {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        width: 100%;
+        border: none;
+        color: $orange;
+        background-color: transparent;
+    }
+
+    &__title {
+        margin-bottom: 25px;
+        text-transform: uppercase;
+        font-family: 'NexaRustSlab', sans-serif;
+        font-weight: 900;
+        line-height: 1.4;
+        letter-spacing: -1px;
+
+        @include breakPoints($tablet, max) {
+            font-size: 31px !important;
+        }
+
+        @include breakPoints($tablet, min) {
+            font-size: 34px;
+        }
+
+        @include breakPoints($laptop, min) {
+            font-size: 46px;
+        }
+    }
+
+    &__accent-title {
+        font-weight: 700;
+        letter-spacing: -0.5px;
+
+        @include breakPoints($tablet, max) {
+            font-size: 22px;
+        }
+
+        @include breakPoints($tablet, min) {
+            font-size: 28px;
+        }
+
+        @include breakPoints($laptop, min) {
+            font-size: 32px;
+        }
+
+        &--line {
+            padding-bottom: 25px;
+            border-bottom: 1px solid $light_gray;
+        }
+    }
+
+    &__text {
+        padding-top: 25px;
+        color: $text_color;
+        font-family: $font_inter;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.55;
+    }
+
+    &__content-wrapper {
+        display: flex;
+        flex-direction: column;
+
+        @include breakPoints($laptop, max) {
+            gap: 42px;
+        }
+
+        @include breakPoints($laptop, min) {
+            display: grid;
+            grid-template-columns: auto minmax(30%, 410px);
+            gap: 30px;
+        }
+    }
+
+    &__orders-history {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        &--empty {
+            justify-content: center;
+            align-items: center;
+            min-height: 20vh;
+        }
+    }
+
+    &__empty-title {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    &__orders-list {
+        display: flex;
+        flex-direction: column;
+        border: none;
+
+        @include breakPoints($tablet, max) {
+            gap: 24px;
+        }
+
+        @include breakPoints($tablet, min) {
+            gap: 17px;
+        }
+    }
+
+    &__order-item,
+    &__order-guide {
+        display: grid;
+        gap: 20px;
+        width: 100%;
+        border-bottom: 1px solid $light_gray;
+        padding-bottom: 24px;
+
+        @include breakPoints($tablet, min) {
+            grid-template-columns: minmax(10%, 183px) 1fr minmax(8%, 100px) repeat(
+                    3,
+                    1fr
+                );
+            padding-bottom: 17px;
+        }
+    }
+
+    &__order-guide {
+        @include breakPoints($tablet, max) {
+            display: none;
+        }
+    }
+
+    &__order-values {
+        display: flex;
+        flex-direction: column;
+        gap: 27px;
+        width: 100%;
+
+        @include breakPoints($tablet, min) {
+            display: grid;
+            grid-template-columns: minmax(10%, 183px) 1fr minmax(8%, 100px) repeat(
+                    3,
+                    1fr
+                );
+            gap: 20px;
+        }
+    }
+
+    &__order-parameter {
+        display: grid;
+        gap: 20px;
+        align-items: center;
+
+        @include breakPoints($tablet, max) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include breakPoints($tablet, min) {
+            &:first-child {
+                .opk-order__order-parameter-value {
+                    text-align: start;
+                }
+            }
+
+            &:last-child {
+                .opk-order__order-parameter-value {
+                    text-align: end;
+                }
+            }
+        }
+    }
+
+    &__order-parameter-title {
+        font-size: 13px;
+        font-weight: 800;
+        line-height: 19.5px;
+        text-transform: uppercase;
+
+        @include breakPoints($tablet, max) {
+            text-align: start;
+        }
+
+        @include breakPoints($tablet, min) {
+            text-align: center;
+
+            &:not(&--main) {
+                display: none;
+            }
+        }
+
+        &:first-child {
+            text-align: start;
+        }
+
+        &:last-child {
+            text-align: end;
+        }
+    }
+
+    &__order-parameter-value {
+        display: -webkit-box !important;
+        max-width: 100% !important;
+        -webkit-line-clamp: 2 !important;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
+        font-family: 'Inter';
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 27px;
+        letter-spacing: -1px;
+        text-align: end;
+
+        @include breakPoints($tablet, min) {
+            text-align: center;
+        }
+    }
+
+    &__sidebar {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    &__sidebar-item {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 800px;
+        height: 100%;
+        margin: 0 !important;
+        border: none !important;
+        background-color: $white;
+
+        @include breakPoints($tablet, max) {
+            padding: 20px !important;
+            border-radius: 20px;
+        }
+
+        @include breakPoints($tablet, min) {
+            padding: 30px !important;
+            border-radius: 50px;
+        }
+    }
+
+    &__payment-status-marker {
+        padding: 5px 13px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 1;
+        letter-spacing: 0.5px;
+        background-color: $orange;
+        color: $white;
+    }
+
+    &__cost-info {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        margin-top: 25px;
+    }
+
+    &__cost-item {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    &__cost-title {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-family: 'Inter';
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 27px;
+        letter-spacing: -1px;
+        text-align: start;
+    }
+
+    &__cost-subtitle {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 27px;
+        letter-spacing: -1px;
+    }
+
+    &__cost-value {
+        text-align: end;
+    }
+}

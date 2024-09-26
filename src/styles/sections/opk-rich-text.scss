@@ -1,0 +1,35 @@
+@import '../variables.scss';
+@import '../mixins.scss';
+
+.opk_rich_text {
+
+}
+
+.opk_rich_text__heading {
+    &:not(:last-child) {
+        margin-bottom: 25px;
+    }
+
+    .head_title__text_bg {
+        @include breakPoints($tablet) {
+            justify-content: center;
+        }
+    }    
+}
+
+.rich-text {
+    @include breakPoints($tablet, min) {
+        padding: 80px 0 25px;
+    }
+    
+    @include breakPoints($tablet) {
+        padding: 60px 0 25px;
+    }
+
+    .rich-text__text--large p {
+        font-family: $font_nexa_bold;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1.27;
+    }
+}

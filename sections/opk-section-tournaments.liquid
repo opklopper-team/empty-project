@@ -1,0 +1,104 @@
+<link rel="stylesheet" href="{{ 'opk-section-tournaments.css' | asset_url }}">
+
+<div class="tournaments">
+   <div class="tournaments__wrapper page-width-small">
+    <div class="tournaments__top">
+        <div class="tournaments__subtitle"><span class="tournaments__subtitle-line"></span>{{ section.settings.subtitle }}</div>
+        {% render 'opk-head-title', bg_mod: true, classMod: true, title: section.settings.title %}
+        <div class="tournaments__text">{{ section.settings.text }}</div>
+    </div>
+    <div class="tournaments__bottom">
+        <div class="tournaments__list">
+            {% for block in section.blocks %}
+                <div class="tournaments__item">
+                    <div class="tournaments__image-box">
+                        {% if block.settings.image %}
+                            <img class="tournaments__item-image" src="{{ block.settings.image |  image_url }}" alt="{{ block.settings.block_title }}">
+                        {% else %}
+                        <img class="tournaments__item-image" src="{{ section.settings.default_image |  image_url }}" alt="{{ block.settings.block_title }}">
+                        {% endif %}
+                    </div>
+                  
+                    <div class="tournaments__item-inner">
+                        <div class="tournaments__item-title">{{ block.settings.block_title }}</div>
+                        <div class="tournaments__item-subtitle">{{ block.settings.block_subtitle }}</div>
+                        <a class="btn btn--primary tournaments__item-button item-button">
+                            <span> {{ block.settings.block_button_text }}</span>
+                            <svg class="icon icon--tail-right" viewBox="0 0 24 24" role="presentation">
+                                <path fill="currentColor" d="M22.707 11.293L15 3.586 13.586 5l6 6H2c-.553 0-1 .448-1 1s.447 1 1 1h17.586l-6 6L15 20.414l7.707-7.707c.391-.391.391-1.023 0-1.414z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+   </div>
+</div>
+
+{% schema %}
+{
+    "name": "Tournaments",
+    "settings": [
+            {
+                "type": "text",
+                "id": "subtitle",
+                "label": "Subtitle"
+            },
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title"
+            },
+            {
+                "type": "text",
+                "id": "text",
+                "label": "Text under title"
+            },
+            {
+                "type": "image_picker",
+                "id": "default_image",
+                "label": "Default image"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "tournaments",
+                "name": "block",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Image"
+                    },
+                    {
+                        "type": "text",
+                        "id": "block_title",
+                        "label": "Title"
+                    },
+                    {
+                        "type": "text",
+                        "id": "block_subtitle",
+                        "label": "Subtitle"
+                    },
+                    {
+                        "type": "text",
+                        "id": "block_button_text",
+                        "label": "Button text"
+                    },
+                    {
+                        "type": "url",
+                        "id": "block_button_link",
+                        "label": "Button link"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+    {
+      "name": "Tournaments"
+    }
+  ]    
+}
+{% endschema %}

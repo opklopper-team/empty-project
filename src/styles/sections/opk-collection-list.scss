@@ -1,0 +1,109 @@
+@import '../mixins.scss';
+@import '../variables.scss';
+
+.opk_collection-list {
+    @include breakPoints($tablet, min) {
+        padding-bottom: 160px;
+    }
+
+    @include breakPoints($tablet, max) {
+        padding-bottom: 60px;
+    }
+
+    .custom_page_header_section {
+        max-height: 250px;
+        padding-bottom: 55px;
+
+        .page-width .page_header_heading {
+            margin-bottom: 0;
+            font-family: $font_nexa_shadow;
+            font-weight: 900;
+            line-height: 1.33;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+
+            @include breakPoints($tablet, min) {
+                font-size: 60px;
+            }
+
+            @include breakPoints($laptop, $tablet) {
+                font-size: 48px;
+            }
+
+            @include breakPoints($tablet, max) {
+                font-size: 34px;
+            }
+        }
+
+        @include breakPoints($tablet, min) {
+            margin-bottom: 95px;
+        }
+
+        @include breakPoints($tablet, max) {
+            margin-bottom: 60px;
+        }
+    }
+
+    .head_title__text {
+        @include breakPoints($tablet, min) {
+            font-size: 60px;
+        }
+
+        @include breakPoints($tablet, max) {
+            font-size: 34px;
+        }
+
+        .head_title__shadow {
+            @include breakPoints($tablet, min) {
+                font-size: 60px;
+            }
+
+            @include breakPoints($tablet, max) {
+                font-size: 34px;
+            }
+        }
+    }
+
+    .grid__item {
+        .collection-grid-item__link {
+            height: fit-content;
+            padding: 50px 20px;
+        }
+
+        .collection-grid-item__image-wrapper {
+            aspect-ratio: 1/1;
+            position: unset;
+            max-width: 160px !important;
+            max-height: 160px !important;
+            border-radius: 50%;
+            overflow: hidden;
+            transform: unset;
+
+            div {
+                display: flex;
+            }
+        }
+
+        .collection-grid-item__title {
+            font-family: $font_nexa_bold;
+            font-size: 26px;
+            font-weight: 700;
+            line-height: 1.23;
+        }
+
+        .collection-grid-item-products-count {
+            font-family: $font_inter;
+            font-size: 16px;
+            font-weight: 400;
+            color: $gray;
+        }
+
+        .collection-grid-item__button_wrapper {
+            .btn {
+                font-family: $font_inter;
+                font-size: 16px;
+                font-weight: 800;
+            }
+        }
+    }
+}

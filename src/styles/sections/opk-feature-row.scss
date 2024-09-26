@@ -1,0 +1,202 @@
+@import "../variables.scss";
+@import '../mixins.scss';
+
+.opk_feature_row {
+    .mobile_carousel {
+        overflow: visible;
+    }
+}
+
+.opk_rich_text {
+    @include breakPoints($tablet) {
+        padding-bottom: 20px !important;
+    }
+}
+
+.opk_feature_row__heading {
+    &:not(:last-child) {
+        margin-bottom: 60px;
+    }
+}
+
+.opk_feature_row__container {
+    @include breakPoints($tabletMd) {
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+    }
+}
+
+.opk_feature_row__wrap {    
+    display: flex;
+   
+    @include breakPoints($tabletMd) {
+        margin-bottom: 0!important;
+        overflow: visible!important;
+    }
+}
+
+.opk_feature_row__item {
+    @include breakPoints($tabletMd, $tablet) {
+        width: 48%;
+        min-width: 48%;
+    }
+
+    @include breakPoints($tablet) {
+        width: 80%!important;
+        min-width: 91%!important;
+        scroll-snap-align: center;
+    }
+
+    &:first-child {
+        @include breakPoints($tabletMd) {
+            margin-left: 0!important;
+        }
+    }
+}
+
+.feature-row {
+    @include breakPoints($tablet) {
+        align-items: flex-start;
+    }
+}
+
+.opk_feature_row__title {
+    font-family: $font_nexa_bold;    
+    font-weight: 700;
+    letter-spacing: -1px;
+
+    @include breakPoints($tablet, min) {
+        font-size: 32px;
+    }
+
+    @include breakPoints($tablet) {
+        font-size: 21px;
+    }
+}
+
+.featured-row__subtext p {    
+    color: $black;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.46;
+    letter-spacing: -1px;
+
+    @include breakPoints($tablet, min) {
+        font-size: 18px;
+    }
+}
+
+.featured-blocks-wrapper.mobile_carousel {
+    align-items: stretch;
+}
+
+.featured-block.layout_grid {
+    // height: 100%;
+}
+
+.feature-row__item { 
+    border-radius: 22px; 
+
+    &:not(.page-width &) {
+        &.layout_left {
+            @include breakPoints($tablet) {
+                padding-right: 22px;
+            }
+        }
+    
+        &.layout_right {
+            @include breakPoints($tablet) {
+                padding-left: 22px;
+            }
+        }
+    }               
+   
+}
+
+.feature-row__text {
+    max-width: 625px;       
+    color: $black;
+
+    &.feature-row__text--left,
+    &.feature-row__text--right {
+        @include breakPoints($laptop, min) {        
+            padding: 0 85px;    
+        }  
+
+        @include breakPoints($laptop, $tablet) {
+            padding: 0 30px;   
+        }
+    }
+
+    @include breakPoints($tablet) {
+        padding: 20px 0;
+    }
+
+    &:not(.page-width &) {
+        @include breakPoints($tablet) {
+            padding-left: 22px;
+            padding-right: 22px;
+        }
+    }
+}  
+
+.feature-row__image-wrapper {
+    max-width: 100%!important;
+    img {
+        .page-width-full & {
+            max-width: 100%!important;
+            max-height: 100%!important;
+        }
+    }
+}
+
+.featured-block {
+    margin-bottom: 0!important;
+}
+
+.featured-block .featured-block-content-wrapper {
+    height: fit-content;
+
+    .featured-block-content {
+        
+        padding: 20px 20px 40px!important;
+
+        @include breakPoints($tablet, min) {
+            max-width: 262px;
+            margin: 0 auto;
+        }        
+        
+        .h4 {
+            margin-bottom: 20px;
+            font-family: $font_nexa_bold;
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 1.18;
+            letter-spacing: -0.25px;
+        }
+
+        p {
+            font-family: "Helvetica";
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.5;
+            
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+.feature-row__text {
+    @include breakPoints($tablet) {        
+        margin: 0!important;
+    } 
+}
+
+.feature-row__text .btn {
+    @include breakPoints($tablet, min) {        
+        min-width: 340px;
+    }
+}

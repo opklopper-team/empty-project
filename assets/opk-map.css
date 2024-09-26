@@ -1,0 +1,37 @@
+/*!*************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/styles/sections/opk-map.scss ***!
+  \*************************************************************************************************************************************************************************************************/
+/* ==================================================== ADAPTIVE =================================================== */
+/* ==================================================== LAYOUTS ==================================================== */
+/* ===================================================== FONTS ===================================================== */
+/* ===================================================== COLORS ==================================================== */
+.opk_map .map-section__content .h4 {
+  margin-bottom: 10px;
+  font-family: "Nexa Bold", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+}
+.opk_map .map-section__content p {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.opk_map .map-section__content .btn {
+  background-color: #fb5f1b;
+}
+.opk_map .map-section__content .btn svg {
+  display: none;
+}
+.opk_map .map-section__content .btn span {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+}
+.opk_map .map-section__content .btn::after {
+  background-color: #bf3b00;
+}
+.opk_map .map-section .rte-setting {
+  margin-bottom: 30px;
+}

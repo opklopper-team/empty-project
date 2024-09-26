@@ -1,0 +1,154 @@
+<link rel="stylesheet" href="{{ 'opk-info-section.css' | asset_url }}">
+
+<style>       
+
+    @media screen and (min-width: 750px) { 
+        #shopify-section-{{ section.id }}.opk_info_section {
+            padding-top: {{ section.settings.padding_top }}px;
+            padding-bottom: {{ section.settings.padding_bottom }}px;
+        }
+    } 
+    
+    @media screen and (max-width: 749px) {
+        #shopify-section-{{ section.id }}.opk_info_section {
+            padding-top: {{ section.settings.padding_top_mobile }}px;
+            padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+        }       
+    }      
+    
+</style>
+
+<div class="opk_info_section__container page-width">
+    <div class="opk_info_section__head">
+        {% if section.settings.subtitle != blank %}
+            <div class="opk_info_section__head_subtitle">
+                <div class="opk_info_section__subtitle">{{ section.settings.subtitle }}</div>        
+            </div>
+        {% endif %}
+    
+        {% if section.settings.title != blank %}
+            {% render 'opk-head-title', bg_mod: true, title: section.settings.title | escape %} 
+        {% endif %}
+    </div>    
+
+    {% if section.blocks.size > 0 %}
+        <div class="opk_info_section__grid">
+            {% for block in section.blocks %}
+                <div class="opk_info_section__item">
+                    {% if block.settings.block_image != blank %}
+                        <div class="opk_info_section__pic_wrap">
+                            <picture class="opk_info_section__pic">
+                                <img width="auto" height="auto" src="{{ block.settings.block_image |  image_url }}" alt="{{ block.settings.block_text }}" class="opk_info_section__img">
+                            </picture>
+                        </div>
+                    {% else %}
+                        <div class="opk_info_section__pic_wrap">
+                            <div class="opk_info_section__pic">
+                                {{ 'collection-3' | placeholder_svg_tag: 'placeholder-svg placeholder-svg--cover' }}     
+                            </div>
+                        </div>                           
+                {% endif %}                       
+                    <div class="opk_info_section__text">{{ block.settings.block_text | replace: '<br>', '<br>'  }}</div>   
+                </div>                
+            {% endfor %}
+        </div>
+    {% endif %}    
+</div>
+
+{% schema %}
+    {
+      "name": "Info blocks",
+      "tag": "section",
+      "class":"opk_info_section",    
+        "settings": [
+          {
+              "type": "range",
+              "id": "padding_top",
+              "min": 20,
+              "max": 200,
+              "step": 5,
+              "unit": "px",
+              "label": "Padding top", 
+              "default": 90       
+          },
+          {
+              "type": "range",
+              "id": "padding_bottom",
+              "min": 20,
+              "max": 200,
+              "step": 5,
+              "unit": "px",
+              "label": "Padding bottom",
+              "default": 90              
+          },
+          {
+              "type": "range",
+              "id": "padding_top_mobile",
+              "min": 0,
+              "max": 100,
+              "step": 5,
+              "unit": "px",
+              "label": "Padding top mobile", 
+              "default": 40       
+          },
+          {
+              "type": "range",
+              "id": "padding_bottom_mobile",
+              "min": 0,
+              "max": 100,
+              "step": 5,
+              "unit": "px",
+              "label": "Padding bottom mobile",
+              "default": 40              
+          },               
+          {
+            "type":"text",
+            "id":"title",
+            "label":"t:sections.featured-products.settings.title.label",
+            "default": "Heading"
+          },	
+          {
+            "type":"text",
+            "id":"subtitle",
+            "label":"t:sections.featured-products.settings.subtitle.label",
+            "default": "Subheading"
+          }          
+        ],
+        "blocks": [
+            {
+                "type": "block",
+                "name": "Items",
+                "settings": [                    
+                    {
+                        "type": "image_picker",
+                        "id": "block_image",
+                        "label": "t:sections.collection-list.blocks.featured_collection.settings.image.label"                    
+                    },
+                    {
+                        "type": "text",
+                        "id": "block_text",
+                        "label": "Block title",
+                        "default": "Title"                        
+                    }
+                ]
+            }
+        ],
+      
+      "presets": [
+      {
+        "name": "Info blocks",
+        "blocks": [
+        {
+          "type": "block"
+        },
+        {
+          "type": "block"
+        },
+        {
+          "type": "block"
+        }
+      ]	
+      }
+      ]
+    }
+  {% endschema %}

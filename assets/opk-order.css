@@ -1,0 +1,305 @@
+/*!***************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/styles/sections/opk-order.scss ***!
+  \***************************************************************************************************************************************************************************************************/
+/* ==================================================== ADAPTIVE =================================================== */
+/* ==================================================== LAYOUTS ==================================================== */
+/* ===================================================== FONTS ===================================================== */
+/* ===================================================== COLORS ==================================================== */
+.opk-order {
+  position: relative;
+  min-height: 40vh;
+}
+@media screen and (max-width: 749px) {
+  .opk-order {
+    padding: 32px 0;
+  }
+}
+@media screen and (min-width: 750px) {
+  .opk-order {
+    padding: 85px 0;
+  }
+}
+.opk-order__page-limiter {
+  max-width: 1400px;
+}
+.opk-order__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fb5f1b;
+}
+.opk-order__navigation-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+  border: none;
+  color: #fb5f1b;
+  background-color: transparent;
+}
+.opk-order__title {
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  font-family: "NexaRustSlab", sans-serif;
+  font-weight: 900;
+  line-height: 1.4;
+  letter-spacing: -1px;
+}
+@media screen and (max-width: 749px) {
+  .opk-order__title {
+    font-size: 31px !important;
+  }
+}
+@media screen and (min-width: 750px) {
+  .opk-order__title {
+    font-size: 34px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .opk-order__title {
+    font-size: 46px;
+  }
+}
+.opk-order__accent-title {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+@media screen and (max-width: 749px) {
+  .opk-order__accent-title {
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 750px) {
+  .opk-order__accent-title {
+    font-size: 28px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .opk-order__accent-title {
+    font-size: 32px;
+  }
+}
+.opk-order__accent-title--line {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #cccccc;
+}
+.opk-order__text {
+  padding-top: 25px;
+  color: #232323;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.55;
+}
+.opk-order__content-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 1199px) {
+  .opk-order__content-wrapper {
+    gap: 42px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .opk-order__content-wrapper {
+    display: grid;
+    grid-template-columns: auto minmax(30%, 410px);
+    grid-gap: 30px;
+    gap: 30px;
+  }
+}
+.opk-order__orders-history {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.opk-order__orders-history--empty {
+  justify-content: center;
+  align-items: center;
+  min-height: 20vh;
+}
+.opk-order__empty-title {
+  font-size: 25px;
+  text-align: center;
+}
+.opk-order__orders-list {
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+@media screen and (max-width: 749px) {
+  .opk-order__orders-list {
+    gap: 24px;
+  }
+}
+@media screen and (min-width: 750px) {
+  .opk-order__orders-list {
+    gap: 17px;
+  }
+}
+.opk-order__order-item, .opk-order__order-guide {
+  display: grid;
+  grid-gap: 20px;
+  gap: 20px;
+  width: 100%;
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: 24px;
+}
+@media screen and (min-width: 750px) {
+  .opk-order__order-item, .opk-order__order-guide {
+    grid-template-columns: minmax(10%, 183px) 1fr minmax(8%, 100px) repeat(3, 1fr);
+    padding-bottom: 17px;
+  }
+}
+@media screen and (max-width: 749px) {
+  .opk-order__order-guide {
+    display: none;
+  }
+}
+.opk-order__order-values {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  width: 100%;
+}
+@media screen and (min-width: 750px) {
+  .opk-order__order-values {
+    display: grid;
+    grid-template-columns: minmax(10%, 183px) 1fr minmax(8%, 100px) repeat(3, 1fr);
+    grid-gap: 20px;
+    gap: 20px;
+  }
+}
+.opk-order__order-parameter {
+  display: grid;
+  grid-gap: 20px;
+  gap: 20px;
+  align-items: center;
+}
+@media screen and (max-width: 749px) {
+  .opk-order__order-parameter {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 750px) {
+  .opk-order__order-parameter:first-child .opk-order__order-parameter-value {
+    text-align: left;
+  }
+  .opk-order__order-parameter:last-child .opk-order__order-parameter-value {
+    text-align: right;
+  }
+}
+.opk-order__order-parameter-title {
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 19.5px;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 749px) {
+  .opk-order__order-parameter-title {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 750px) {
+  .opk-order__order-parameter-title {
+    text-align: center;
+  }
+  .opk-order__order-parameter-title:not(.opk-order__order-parameter-title--main) {
+    display: none;
+  }
+}
+.opk-order__order-parameter-title:first-child {
+  text-align: left;
+}
+.opk-order__order-parameter-title:last-child {
+  text-align: right;
+}
+.opk-order__order-parameter-value {
+  display: -webkit-box !important;
+  max-width: 100% !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+  font-family: "Inter";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: -1px;
+  text-align: right;
+}
+@media screen and (min-width: 750px) {
+  .opk-order__order-parameter-value {
+    text-align: center;
+  }
+}
+.opk-order__sidebar {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 12px;
+}
+.opk-order__sidebar-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px;
+  height: 100%;
+  margin: 0 !important;
+  border: none !important;
+  background-color: #ffffff;
+}
+@media screen and (max-width: 749px) {
+  .opk-order__sidebar-item {
+    padding: 20px !important;
+    border-radius: 20px;
+  }
+}
+@media screen and (min-width: 750px) {
+  .opk-order__sidebar-item {
+    padding: 30px !important;
+    border-radius: 50px;
+  }
+}
+.opk-order__payment-status-marker {
+  padding: 5px 13px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.5px;
+  background-color: #fb5f1b;
+  color: #ffffff;
+}
+.opk-order__cost-info {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 25px;
+}
+.opk-order__cost-item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  gap: 20px;
+}
+.opk-order__cost-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: "Inter";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 27px;
+  letter-spacing: -1px;
+  text-align: left;
+}
+.opk-order__cost-subtitle {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: -1px;
+}
+.opk-order__cost-value {
+  text-align: right;
+}

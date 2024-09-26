@@ -1,0 +1,300 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "header_image": "shopify:\/\/shop_images\/Background_761509f1-da93-4fef-a050-c422d10747e4.webp",
+        "image_overlay_color": "#000000",
+        "image_overlay_opacity": 0,
+        "show_breadcrumbs": true,
+        "show_page_content_checkbox": false
+      }
+    },
+    "16575510437613debb": {
+      "type": "rich-text",
+      "settings": {
+        "content_width": "100",
+        "bg_color": "",
+        "section_color": "#232323",
+        "rte_icon_width": 100,
+        "section_title": "About padel2gether",
+        "subtitle": "who we are",
+        "subtitle_color": "#fb5f1b",
+        "text": "<p>Padel2Gether is the padel community of Westland and surroundings. We aim to bring padel playing Westland and surroundings together. <\/p>",
+        "text_size": "large"
+      }
+    },
+    "1657289196b60a664c": {
+      "type": "mosaic",
+      "blocks": {
+        "16572891968af612bf-0": {
+          "type": "image",
+          "settings": {
+            "cta_label": "Title",
+            "cta_sublabel": "Description",
+            "link": "",
+            "cta_col": 2,
+            "cta_image_height": "medium",
+            "caption_align": "center",
+            "caption_position": "bottom",
+            "caption_size": "h3",
+            "caption_color": "#ffffff"
+          }
+        },
+        "16572891968af612bf-1": {
+          "type": "image",
+          "settings": {
+            "cta_label": "Title",
+            "cta_sublabel": "Description",
+            "link": "",
+            "cta_col": 4,
+            "cta_image_height": "1",
+            "caption_align": "center",
+            "caption_position": "bottom",
+            "caption_size": "h3",
+            "caption_color": "#ffffff"
+          }
+        },
+        "16572891968af612bf-2": {
+          "type": "image",
+          "settings": {
+            "cta_label": "Title",
+            "cta_sublabel": "Description",
+            "link": "",
+            "cta_col": 4,
+            "cta_image_height": "1",
+            "caption_align": "center",
+            "caption_position": "bottom",
+            "caption_size": "h3",
+            "caption_color": "#ffffff"
+          }
+        },
+        "16572891968af612bf-3": {
+          "type": "image",
+          "settings": {
+            "cta_label": "Title",
+            "cta_sublabel": "Description",
+            "link": "",
+            "cta_col": 2,
+            "cta_image_height": "medium",
+            "caption_align": "center",
+            "caption_position": "bottom",
+            "caption_size": "h3",
+            "caption_color": "#ffffff"
+          }
+        },
+        "16572891968af612bf-4": {
+          "type": "image",
+          "settings": {
+            "cta_label": "Title",
+            "cta_sublabel": "Description",
+            "link": "",
+            "cta_col": 2,
+            "cta_image_height": "medium",
+            "caption_align": "center",
+            "caption_position": "bottom",
+            "caption_size": "h3",
+            "caption_color": "#ffffff"
+          }
+        },
+        "16572891968af612bf-5": {
+          "type": "image",
+          "settings": {
+            "cta_label": "Title",
+            "cta_sublabel": "Description",
+            "link": "",
+            "cta_col": 2,
+            "cta_image_height": "medium",
+            "caption_align": "center",
+            "caption_position": "bottom",
+            "caption_size": "h3",
+            "caption_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "16572891968af612bf-0",
+        "16572891968af612bf-1",
+        "16572891968af612bf-2",
+        "16572891968af612bf-3",
+        "16572891968af612bf-4",
+        "16572891968af612bf-5"
+      ],
+      "disabled": true,
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "title": "Gallery",
+        "subtitle": "Subtitle",
+        "subtitle_color": "#fb5f1b",
+        "use_stacked_layout": false,
+        "use_lightbox": false,
+        "overlay_opacity": 0,
+        "overlay_color": "#000000",
+        "gutter_width": "22",
+        "title_transform": "none",
+        "hover_animation": "zoom-in",
+        "use_mobile_redability": false,
+        "removeBottomMargin": false,
+        "button_title": "",
+        "button_url": ""
+      }
+    },
+    "16572892049d863d7d": {
+      "type": "feature-row",
+      "settings": {
+        "padding_top": 25,
+        "padding_bottom": 30,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40,
+        "section_width": "page-width",
+        "image": "shopify:\/\/shop_images\/about_1.webp",
+        "layout": "left",
+        "title": "The faces behind Padel2Gether and its origins",
+        "text": "<p>Padel2gether is not about us. It's about you! Together we hope to take the love for the sport and the fun to a higher level. To promote the TOGETHER feeling. Do you also have ideas for this? Send us a message and together we will make something beautiful out of it!We get to work with great brands like Wilson, Siux and Nox. We also sponsor local tournaments and work with ambassadors.<\/p>",
+        "button_style": "primary",
+        "button_label": "",
+        "button_link": ""
+      }
+    },
+    "1657289215d61829ac": {
+      "type": "feature-row",
+      "settings": {
+        "padding_top": 30,
+        "padding_bottom": 80,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40,
+        "section_width": "page-width",
+        "image": "shopify:\/\/shop_images\/about_2.png",
+        "layout": "right",
+        "title": "The faces behind Padel2Gether and its origins",
+        "text": "<p>We're Jan and Joey, passionate padel players. Frustrated by the lack of a one-stop website for padel in Westland, we created Padel2Gether. We're not pros, but with our experience, we know the right gear and offer free racket testing to ensure you find your perfect match. Join us on the padel court!<\/p>",
+        "button_style": "primary",
+        "button_label": "",
+        "button_link": ""
+      }
+    },
+    "1657289224f19ea1e0": {
+      "type": "featured-blocks",
+      "blocks": {
+        "1657289224888f4166-0": {
+          "type": "block",
+          "settings": {
+            "heading": "Jake Smith",
+            "content": "<p>Founder<\/p><p>Jake has poured his heart and soul into this company for the past 15 years.<\/p>",
+            "image": "shopify:\/\/shop_images\/Rectangle_1.png",
+            "url": ""
+          }
+        },
+        "1657289224888f4166-1": {
+          "type": "block",
+          "settings": {
+            "heading": "Jessica Conrad",
+            "content": "<p>Co-Founder<\/p><p>Along with Jake, Jessica has been here since the beginning.<\/p>",
+            "image": "shopify:\/\/shop_images\/Rectangle_2.png",
+            "url": ""
+          }
+        },
+        "1657289224888f4166-2": {
+          "type": "block",
+          "settings": {
+            "heading": "Michael Blake",
+            "content": "<p>Marketing<\/p><p>Michael is responsible for the website and all the marketing and advertising we do.<\/p>",
+            "image": "shopify:\/\/shop_images\/Rectangle_3png.png",
+            "url": ""
+          }
+        },
+        "1657289224888f4166-3": {
+          "type": "block",
+          "settings": {
+            "heading": "Melissa Brooks",
+            "content": "<p>Human Resources<\/p><p>Melly is in charge of hiring and human resources. She runs a tight ship.<\/p>",
+            "image": "shopify:\/\/shop_images\/Rectangle_4.png",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "1657289224888f4166-0",
+        "1657289224888f4166-1",
+        "1657289224888f4166-2",
+        "1657289224888f4166-3"
+      ],
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40,
+        "layout": "grid",
+        "title": "Heading",
+        "subtitle": "Subheading",
+        "subtitle_color": "#fb5f1b",
+        "image_style": "circle",
+        "mobile_carousel": true
+      }
+    },
+    "16572892393df4d5fa": {
+      "type": "logo-bar",
+      "blocks": {
+        "1657289239d2f2b45a-0": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/wilson.png",
+            "link": ""
+          }
+        },
+        "1657289239d2f2b45a-1": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/siux_d3322835-1dcc-43af-bcf0-5cf89b23581e.png",
+            "link": ""
+          }
+        },
+        "1657289239d2f2b45a-2": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/nox.png",
+            "link": ""
+          }
+        },
+        "1657289239d2f2b45a-3": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/hirostar.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1657289239d2f2b45a-0",
+        "1657289239d2f2b45a-1",
+        "1657289239d2f2b45a-2",
+        "1657289239d2f2b45a-3"
+      ],
+      "settings": {
+        "title": "OUR TRUSTED BRANDS",
+        "subtitle": "",
+        "subtitle_color": "#fb5f1b",
+        "enable_carousel": false,
+        "show_dots": true,
+        "show_arrows": true,
+        "enable_autoplay": false,
+        "cycle_speed": 5,
+        "logos_count": 4,
+        "rows_count": 2,
+        "show_hover_opacity": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16575510437613debb",
+    "1657289196b60a664c",
+    "16572892049d863d7d",
+    "1657289215d61829ac",
+    "1657289224f19ea1e0",
+    "16572892393df4d5fa"
+  ]
+}

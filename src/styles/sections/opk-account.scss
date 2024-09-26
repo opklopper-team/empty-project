@@ -1,0 +1,262 @@
+@import '../mixins.scss';
+@import '../variables.scss';
+
+.opk-account {
+    position: relative;
+    min-height: 40vh;
+
+    @include breakPoints($tablet, max) {
+        padding: 32px 0;
+    }
+
+    @include breakPoints($tablet, min) {
+        padding: 85px 0;
+    }
+
+    &__page-limiter {
+        max-width: 1400px;
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: $orange;
+    }
+
+    &__header-wrapper {
+        @include breakPoints($tablet, max) {
+            margin-bottom: 0;
+        }
+
+        @include breakPoints($tablet, min) {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__navigation-item {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        width: 100%;
+        border: none;
+        color: $orange;
+        background-color: transparent;
+    }   
+
+    &__accent-title {
+        font-weight: 700;
+        letter-spacing: -0.5px;
+
+        @include breakPoints($tablet, max) {
+            font-size: 22px;
+        }
+
+        @include breakPoints($tablet, min) {
+            font-size: 28px;
+        }
+
+        @include breakPoints($laptop, min) {
+            font-size: 32px;
+        }
+
+        &--line {
+            padding-bottom: 25px;
+            border-bottom: 1px solid $light_gray;
+        }
+    }
+
+    &__text {
+        padding-top: 25px;
+        color: $text_color;
+        font-family: $font_inter;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.55;
+    }
+
+    &__content-wrapper {
+        display: flex;
+        flex-direction: column;
+
+        @include breakPoints($laptop, max) {
+            gap: 42px;
+        }
+
+        @include breakPoints($laptop, min) {
+            display: grid;
+            grid-template-columns: auto minmax(30%, 410px);
+            gap: 30px;
+        }
+    }
+
+    &__orders-history {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        &--empty {
+            justify-content: center;
+            align-items: center;
+            min-height: 20vh;
+        }
+    }
+
+    &__empty-title {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    &__orders-list {
+        display: flex;
+        flex-direction: column;
+
+        @include breakPoints($tablet, max) {
+            gap: 24px;
+        }
+
+        @include breakPoints($tablet, min) {
+            gap: 17px;
+        }
+    }
+
+    &__order-item,
+    &__order-guide {
+        display: grid;
+        gap: 20px;
+        width: 100%;
+        border-bottom: 1px solid $light_gray;
+        padding-bottom: 24px;
+
+        @include breakPoints($tablet, min) {
+            grid-template-columns: repeat(5, 1fr);
+            padding-bottom: 17px;
+        }
+    }
+
+    &__order-guide {
+        @include breakPoints($tablet, max) {
+            display: none;
+        }
+    }
+
+    &__order-values {
+        display: flex;
+        flex-direction: column;
+        gap: 27px;
+        width: 100%;
+
+        @include breakPoints($tablet, min) {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+        }
+    }
+
+    &__order-parameter {
+        display: grid;
+        gap: 20px;
+        align-items: center;
+
+        @include breakPoints($tablet, max) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include breakPoints($tablet, min) {
+            &:first-child {
+                .opk-account__order-parameter-value {
+                    text-align: start;
+                }
+            }
+
+            &:last-child {
+                .opk-account__order-parameter-value {
+                    text-align: end;
+                }
+            }
+        }
+    }
+
+    &__order-parameter-title {
+        font-size: 13px;
+        font-weight: 800;
+        line-height: 19.5px;
+        text-transform: uppercase;
+
+        @include breakPoints($tablet, max) {
+            text-align: start;
+        }
+
+        @include breakPoints($tablet, min) {
+            text-align: center;
+
+            &:not(&--main) {
+                display: none;
+            }
+        }
+
+        &:first-child {
+            text-align: start;
+        }
+
+        &:last-child {
+            text-align: end;
+        }
+    }
+
+    &__order-parameter-value {
+        font-family: 'Inter';
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 27px;
+        letter-spacing: -1px;
+        text-align: end;
+
+        @include breakPoints($tablet, min) {
+            text-align: center;
+        }
+    }
+
+    &__sidebar {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    &__sidebar-item {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 800px;
+        height: fit-content;
+        margin: 0 !important;
+        border: none !important;
+        background-color: $white;
+
+        @include breakPoints($tablet, max) {
+            padding: 20px !important;
+            border-radius: 20px;
+        }
+
+        @include breakPoints($tablet, min) {
+            padding: 30px !important;
+            border-radius: 50px;
+        }
+    }
+
+    &__button {
+        width: 100%;
+        margin: 30px 0 0 0 !important;
+        padding: 13px 22px;
+        text-align: center;
+        font-family: $font_inter;
+        font-size: 16px;
+        font-weight: 800;
+        line-height: 1.4;
+        background-color: $blue;
+        color: $white;
+    }
+}
+

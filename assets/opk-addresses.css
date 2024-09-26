@@ -1,0 +1,333 @@
+/*!*******************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/styles/sections/opk-addresses.scss ***!
+  \*******************************************************************************************************************************************************************************************************/
+/* ==================================================== ADAPTIVE =================================================== */
+/* ==================================================== LAYOUTS ==================================================== */
+/* ===================================================== FONTS ===================================================== */
+/* ===================================================== COLORS ==================================================== */
+.opk-addresses {
+  position: relative;
+}
+@media screen and (max-width: 749px) {
+  .opk-addresses {
+    min-height: 1040px;
+    padding: 32px 0;
+  }
+}
+@media screen and (min-width: 750px) {
+  .opk-addresses {
+    min-height: 800px;
+    padding: 85px 0;
+  }
+}
+.opk-addresses__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fb5f1b;
+}
+.opk-addresses__title {
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  font-family: "NexaRustSlab", sans-serif;
+  font-weight: 900;
+  line-height: 1.4;
+  letter-spacing: -1px;
+}
+@media screen and (max-width: 749px) {
+  .opk-addresses__title {
+    font-size: 31px !important;
+  }
+}
+@media screen and (min-width: 750px) {
+  .opk-addresses__title {
+    font-size: 34px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .opk-addresses__title {
+    font-size: 46px;
+  }
+}
+.opk-addresses__text {
+  padding-top: 25px;
+  color: #232323;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.55;
+}
+.opk-addresses__navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+@media screen and (min-width: 750px) {
+  .opk-addresses__navigation {
+    gap: 10px;
+  }
+}
+.opk-addresses__navigation-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  color: #fb5f1b;
+  background-color: transparent;
+}
+.opk-addresses__content-container {
+  max-width: 1780px;
+}
+@media screen and (max-width: 749px) {
+  .opk-addresses__content-container {
+    padding-left: 19px !important;
+    padding-right: 19px !important;
+  }
+}
+@media screen and (min-width: 750px) {
+  .opk-addresses__content-container {
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .opk-addresses__content-container {
+    padding-left: 55px !important;
+    padding-right: 55px !important;
+  }
+}
+.opk-addresses__grid {
+  margin: 0 !important;
+}
+.opk-addresses__grid-item {
+  padding: 0 !important;
+  min-height: 20vh;
+}
+.opk-addresses__grid-item--empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.opk-addresses__empty-title {
+  font-size: 25px;
+  text-align: center;
+}
+.opk-addresses__addresses {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+@media screen and (max-width: 749px) {
+  .opk-addresses__addresses {
+    gap: 42px;
+  }
+}
+@media screen and (min-width: 750px) {
+  .opk-addresses__addresses {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    gap: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .opk-addresses__addresses {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-auto-rows: 1fr;
+    gap: 12px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .opk-addresses__addresses {
+    grid-template-columns: repeat(4, minmax(350px, 1fr));
+    gap: 9px;
+  }
+}
+.opk-addresses__address {
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  margin: 0 !important;
+  border: none !important;
+  background-color: #ffffff;
+}
+@media screen and (max-width: 749px) {
+  .opk-addresses__address {
+    padding: 20px !important;
+    border-radius: 20px;
+  }
+}
+@media screen and (min-width: 750px) {
+  .opk-addresses__address {
+    padding: 30px !important;
+    border-radius: 50px;
+  }
+}
+.opk-addresses__address .address {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.opk-addresses__default-marker {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0;
+}
+@media screen and (min-width: 750px) {
+  .opk-addresses__default-marker {
+    min-height: 1.7em;
+  }
+}
+.opk-addresses__default-marker-title {
+  padding: 5px 13px;
+  border: 2px solid #fb5f1b;
+  border-radius: 20px;
+  font-family: "Inter";
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.5px;
+  color: #fb5f1b;
+}
+.opk-addresses__buttons {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 30px;
+}
+@media screen and (max-width: 749px) {
+  .opk-addresses__buttons {
+    gap: 16px;
+  }
+}
+@media screen and (min-width: 750px) {
+  .opk-addresses__buttons {
+    flex-direction: row;
+    gap: 10px;
+  }
+}
+.opk-addresses__button {
+  justify-content: center;
+  width: 100%;
+  margin: 0 !important;
+  padding: 13px 22px;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.4;
+  background-color: #2460a9;
+  color: #ffffff;
+}
+@media screen and (min-width: 750px) {
+  .opk-addresses__button {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 749px) {
+  .opk-addresses__button {
+    margin-top: 8px;
+  }
+}
+.opk-addresses__button--secondary {
+  margin-top: 0;
+  text-align: center;
+  border: 1px solid #000000;
+  background-color: transparent;
+  color: #000000;
+}
+@media screen and (min-width: 750px) {
+  .opk-addresses__button--secondary {
+    margin-bottom: 100px;
+  }
+}
+@media screen and (max-width: 749px) {
+  .opk-addresses__button--secondary {
+    margin-bottom: 0;
+  }
+}
+.opk-addresses__button--secondary span + svg {
+  margin-left: 5px;
+}
+.opk-addresses__button--secondary:not([disabled]):hover {
+  background-color: transparent;
+  color: #ffffff !important;
+}
+.opk-addresses__form-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-body);
+  z-index: 5;
+}
+.opk-addresses__form {
+  position: relative;
+  width: 100%;
+  max-width: 813px;
+  margin: 0;
+}
+@media screen and (max-width: 749px) {
+  .opk-addresses__form {
+    padding-left: 19px !important;
+    padding-right: 19px !important;
+  }
+}
+@media screen and (min-width: 750px) {
+  .opk-addresses__form {
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .opk-addresses__form {
+    padding-left: 55px !important;
+    padding-right: 55px !important;
+  }
+}
+.opk-addresses__form-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.opk-addresses__subtitle {
+  color: #fb5f1b;
+}
+.opk-addresses__input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 749px) {
+  .opk-addresses__input-wrapper {
+    gap: 8px;
+  }
+}
+@media screen and (min-width: 750px) {
+  .opk-addresses__input-wrapper {
+    gap: 6px;
+  }
+}
+.opk-addresses__form-footer {
+  margin-top: 10px;
+}
+.opk-addresses__form-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.opk-addresses__form-button {
+  width: 100%;
+}

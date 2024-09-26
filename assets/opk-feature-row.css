@@ -1,0 +1,191 @@
+/*!*********************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/styles/sections/opk-feature-row.scss ***!
+  \*********************************************************************************************************************************************************************************************************/
+/* ==================================================== ADAPTIVE =================================================== */
+/* ==================================================== LAYOUTS ==================================================== */
+/* ===================================================== FONTS ===================================================== */
+/* ===================================================== COLORS ==================================================== */
+.opk_feature_row .mobile_carousel {
+  overflow: visible;
+}
+
+@media screen and (max-width: 749px) {
+  .opk_rich_text {
+    padding-bottom: 20px !important;
+  }
+}
+
+.opk_feature_row__heading:not(:last-child) {
+  margin-bottom: 60px;
+}
+
+@media screen and (max-width: 989px) {
+  .opk_feature_row__container {
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+  }
+}
+
+.opk_feature_row__wrap {
+  display: flex;
+}
+@media screen and (max-width: 989px) {
+  .opk_feature_row__wrap {
+    margin-bottom: 0 !important;
+    overflow: visible !important;
+  }
+}
+
+@media (max-width: 989px) and (min-width: 750px) {
+  .opk_feature_row__item {
+    width: 48%;
+    min-width: 48%;
+  }
+}
+@media screen and (max-width: 749px) {
+  .opk_feature_row__item {
+    width: 80% !important;
+    min-width: 91% !important;
+    scroll-snap-align: center;
+  }
+}
+@media screen and (max-width: 989px) {
+  .opk_feature_row__item:first-child {
+    margin-left: 0 !important;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .feature-row {
+    align-items: flex-start;
+  }
+}
+
+.opk_feature_row__title {
+  font-family: "Nexa Bold", sans-serif;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+@media screen and (min-width: 750px) {
+  .opk_feature_row__title {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 749px) {
+  .opk_feature_row__title {
+    font-size: 21px;
+  }
+}
+
+.featured-row__subtext p {
+  color: #000000;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.46;
+  letter-spacing: -1px;
+}
+@media screen and (min-width: 750px) {
+  .featured-row__subtext p {
+    font-size: 18px;
+  }
+}
+
+.featured-blocks-wrapper.mobile_carousel {
+  align-items: stretch;
+}
+
+.feature-row__item {
+  border-radius: 22px;
+}
+@media screen and (max-width: 749px) {
+  .feature-row__item:not(.page-width .feature-row__item).layout_left {
+    padding-right: 22px;
+  }
+}
+@media screen and (max-width: 749px) {
+  .feature-row__item:not(.page-width .feature-row__item).layout_right {
+    padding-left: 22px;
+  }
+}
+
+.feature-row__text {
+  max-width: 625px;
+  color: #000000;
+}
+@media screen and (min-width: 1200px) {
+  .feature-row__text.feature-row__text--left, .feature-row__text.feature-row__text--right {
+    padding: 0 85px;
+  }
+}
+@media (max-width: 1199px) and (min-width: 750px) {
+  .feature-row__text.feature-row__text--left, .feature-row__text.feature-row__text--right {
+    padding: 0 30px;
+  }
+}
+@media screen and (max-width: 749px) {
+  .feature-row__text {
+    padding: 20px 0;
+  }
+}
+@media screen and (max-width: 749px) {
+  .feature-row__text:not(.page-width .feature-row__text) {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+}
+
+.feature-row__image-wrapper {
+  max-width: 100% !important;
+}
+.page-width-full .feature-row__image-wrapper img {
+  max-width: 100% !important;
+  max-height: 100% !important;
+}
+
+.featured-block {
+  margin-bottom: 0 !important;
+}
+
+.featured-block .featured-block-content-wrapper {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.featured-block .featured-block-content-wrapper .featured-block-content {
+  padding: 20px 20px 40px !important;
+}
+@media screen and (min-width: 750px) {
+  .featured-block .featured-block-content-wrapper .featured-block-content {
+    max-width: 262px;
+    margin: 0 auto;
+  }
+}
+.featured-block .featured-block-content-wrapper .featured-block-content .h4 {
+  margin-bottom: 20px;
+  font-family: "Nexa Bold", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -0.25px;
+}
+.featured-block .featured-block-content-wrapper .featured-block-content p {
+  font-family: "Helvetica";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.featured-block .featured-block-content-wrapper .featured-block-content p:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 749px) {
+  .feature-row__text {
+    margin: 0 !important;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .feature-row__text .btn {
+    min-width: 340px;
+  }
+}

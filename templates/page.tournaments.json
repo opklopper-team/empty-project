@@ -1,0 +1,198 @@
+{
+  "sections": {
+    "main": {
+      "type": "brands-section",
+      "settings": {
+        "header_image": "shopify:\/\/shop_images\/clinics.webp",
+        "image_overlay_color": "#000000",
+        "image_overlay_opacity": 0,
+        "show_breadcrumbs": true,
+        "show_page_content": false
+      }
+    },
+    "opk_section_tournaments_diandX": {
+      "type": "opk-section-tournaments",
+      "blocks": {
+        "tournaments_fhheh9": {
+          "type": "tournaments",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_1.png",
+            "block_title": "Open Padeltoernooi bij LTC 's-Gravenzande",
+            "block_subtitle": "22-6-2024 t\/m 30-6-2024",
+            "block_button_text": "View event",
+            "block_button_link": "\/"
+          }
+        },
+        "tournaments_W9XfTr": {
+          "type": "tournaments",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_2.png",
+            "block_title": "Westlands Padel Open 2024 bij Naaldwijk",
+            "block_subtitle": "29-7-2024 t\/m 4-8-2024",
+            "block_button_text": "View event",
+            "block_button_link": "\/"
+          }
+        },
+        "tournaments_nWbMYj": {
+          "type": "tournaments",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_3.png",
+            "block_title": "Zoetermeerse Open Padelkampioenschap 2024",
+            "block_subtitle": "12-8-2024 t\/m 18-8-2024",
+            "block_button_text": "View event",
+            "block_button_link": ""
+          }
+        },
+        "tournaments_UDbwGA": {
+          "type": "tournaments",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/default_image.png",
+            "block_title": "TOGB Voscon Open Padel toernooi \/ P100 (Berkel en Rodenrijs)",
+            "block_subtitle": "30-8-2024 t\/m 1-9-2024",
+            "block_button_text": "View event",
+            "block_button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "tournaments_fhheh9",
+        "tournaments_W9XfTr",
+        "tournaments_nWbMYj",
+        "tournaments_UDbwGA"
+      ],
+      "settings": {
+        "subtitle": "Westland Competitive Events",
+        "title": "compete, win, and stay updated!",
+        "text": "Meedoen met een toernooi in de regio Westland? Check het hieronder! Ook vind je hier alle uitslagen."
+      }
+    },
+    "mosaic_9AULLq": {
+      "type": "mosaic",
+      "blocks": {
+        "image_LFwNcf": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_5_2.png",
+            "cta_label": "Maandag 29.07.2024",
+            "cta_sublabel": "",
+            "link": "",
+            "cta_col": 2,
+            "cta_image_height": "medium",
+            "caption_align": "center",
+            "caption_position": "bottom",
+            "caption_size": "h3",
+            "caption_color": "#ffffff"
+          }
+        },
+        "image_PWQJUm": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_6.png",
+            "cta_label": "Woensdag 31.7.2024",
+            "cta_sublabel": "",
+            "link": "",
+            "cta_col": 4,
+            "cta_image_height": "1",
+            "caption_align": "center",
+            "caption_position": "top",
+            "caption_size": "h3",
+            "caption_color": "#ffffff"
+          }
+        },
+        "image_PMkiMQ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_7.png",
+            "cta_label": "Donderdag 1.8.2024",
+            "cta_sublabel": "",
+            "link": "",
+            "cta_col": 4,
+            "cta_image_height": "1",
+            "caption_align": "center",
+            "caption_position": "bottom",
+            "caption_size": "h3",
+            "caption_color": "#ffffff"
+          }
+        },
+        "image_qNQgqB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_8.png",
+            "cta_label": "Vrijdag 2.8.2024",
+            "cta_sublabel": "",
+            "link": "",
+            "cta_col": 2,
+            "cta_image_height": "medium",
+            "caption_align": "center",
+            "caption_position": "bottom",
+            "caption_size": "h3",
+            "caption_color": "#ffffff"
+          }
+        },
+        "image_RKyy4e": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_4_2.png",
+            "cta_label": "Dinsdag 30.7.2024",
+            "cta_sublabel": "",
+            "link": "",
+            "cta_col": 2,
+            "cta_image_height": "medium",
+            "caption_align": "center",
+            "caption_position": "bottom",
+            "caption_size": "h3",
+            "caption_color": "#ffffff"
+          }
+        },
+        "image_e7XxM7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_0.png",
+            "cta_label": "Zaterdag 3.8.2024",
+            "cta_sublabel": "",
+            "link": "",
+            "cta_col": 2,
+            "cta_image_height": "medium",
+            "caption_align": "center",
+            "caption_position": "bottom",
+            "caption_size": "h3",
+            "caption_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "image_LFwNcf",
+        "image_PWQJUm",
+        "image_PMkiMQ",
+        "image_qNQgqB",
+        "image_RKyy4e",
+        "image_e7XxM7"
+      ],
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 85,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 30,
+        "title": "Latest Events Photo",
+        "subtitle": "the 2024 Westlands Padel Open",
+        "subtitle_color": "#FB5F1B",
+        "use_stacked_layout": false,
+        "use_lightbox": false,
+        "overlay_opacity": 0,
+        "overlay_color": "#000000",
+        "gutter_width": "22",
+        "title_transform": "none",
+        "hover_animation": "zoom-in",
+        "use_mobile_redability": false,
+        "removeBottomMargin": false,
+        "button_title": "See more photos",
+        "button_url": "shopify:\/\/pages\/fotos"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "opk_section_tournaments_diandX",
+    "mosaic_9AULLq"
+  ]
+}

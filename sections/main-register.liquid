@@ -1,0 +1,185 @@
+<link rel="stylesheet" href="{{ 'opk-login-register.css' | asset_url }}" type="text/css">
+
+{% assign header_image = settings.customer_header_image %}
+{% assign header_heading = 'customer.register.title' | t %}
+{% assign show_breadcrumbs = settings.show_customer_breadcrumbs %}
+{% assign show_heading = settings.show_customer_heading %}
+
+{% assign image_overlay_color = settings.customer_image_overlay_color %}
+{% assign image_overlay_opacity = settings.customer_image_overlay_opacity %}
+
+{% if header_image != blank %}
+    {% render 'custom_page_header' image: header_image, heading: header_heading, show_breadcrumbs: show_breadcrumbs, show_heading: show_heading, image_overlay_color: image_overlay_color, image_overlay_opacity: image_overlay_opacity %}
+{% endif %}
+
+<section id="section-{{ section.id }}" data-section-id="{{ section.id }}" class="opk-login">
+    <div class="page-width">
+        <div class="grid">
+            <div class="grid__item medium-up--one-half medium-up--push-one-quarter opk-login__container">
+
+                <div class='customer-forms-wrapper opk-login__form'>
+                    <div class="form-vertical">
+
+                        {% if header_image == blank %}
+                            {% if show_heading %}
+                                <h1 class="text-center h3 opk-login__title opk-login__title head_title__text_bg head_title__word">{{ section.settings.title }}</h1>
+                            {% endif %}
+                            {% if section.settings.text %}
+                                <p class="opk-login__text">{{ section.settings.text }}</p>
+                            {% endif %}
+                            {% if show_breadcrumbs %}
+                                <div class='account-breadcrumbs'>
+                                    <ol class="breadcrumbs__list">
+                                        <li class="breadcrumbs__item">
+                                            <a class="breadcrumbs__link"
+                                               href="{{ routes.root_url }}">{{ 'general.breadcrumbs.home' | t }}</a>
+                                        </li>
+                                        <li class="breadcrumbs__item">
+                                            <span>{{ 'customer.register.create_account' | t }}</span>
+                                        </li>
+                                    </ol>
+                                </div>
+                            {% endif %}
+
+                        {% endif %}
+
+                        {%- assign formId = 'RegisterForm' -%}
+                        {% form 'create_customer', id: formId, novalidate: 'novalidate' %}
+                            {% render 'form-status', form: form, form_id: formId %}
+
+
+                            <div class="opk-login__label-container">
+                                <label class="opk-login__label">
+                                    {{ 'customer.register.first_name' | t }}
+                                    <input type="text" name="customer[first_name]" id="{{ formId }}-FirstName"
+                                           {% if form.first_name %}value="{{ form.first_name }}"{% endif %}
+                                           autocomplete="given-name" placeholder="">
+                                </label>
+
+                                <label class="opk-login__label">
+                                    {{ 'customer.register.last_name' | t }}
+                                    <input type="text" name="customer[last_name]" id="{{ formId }}-LastName"
+                                           {% if form.last_name %}value="{{ form.last_name }}"{% endif %}
+                                           autocomplete="family-name" placeholder="">
+                                </label>
+                            </div>
+
+                            <label class="opk-login__label">
+                                {{ 'customer.register.email' | t }}
+                                <input
+                                        type="email"
+                                        name="customer[email]"
+                                        id="{{ formId }}-email"
+                                        class="{% if form.errors contains 'email' %} input--error{% endif %}"
+                                        {% if form.email %} value="{{ form.email }}"{% endif %}
+                                        autocorrect="off"
+                                        autocapitalize="off"
+                                        autocomplete="email"
+                                        aria-required="true"
+                                        placeholder=""
+                                        {%- if form.errors contains 'email' -%}
+                                            class="input--error"
+                                            aria-invalid="true"
+                                            aria-describedby="{{ formId }}-email-error"
+                                        {%- endif -%}
+                                >
+                            </label>
+
+                            {%- if form.errors contains 'email' -%}
+                                <span id="{{ formId }}-email-error" class="input-error-message">
+              <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
+              {% render 'icon-error' %}
+              <span>{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}.</span>
+            </span>
+                            {%- endif -%}
+
+                            <label class="opk-login__label">
+                                {{ 'customer.register.password' | t }}
+                                <input
+                                        type="password"
+                                        name="customer[password]"
+                                        id="{{ formId }}-password"
+                                        class="{% if form.errors contains 'password' %} input--error{% endif %}"
+                                        aria-required="true"
+                                        {%- if form.errors contains 'password' -%}
+                                            class="input--error"
+                                            aria-invalid="true"
+                                            aria-describedby="{{ formId }}-password-error"
+                                        {%- endif -%}
+                                        placeholder=""
+                                >
+                            </label>
+
+
+                            {%- if form.errors contains 'password' -%}
+                                <span id="{{ formId }}-password-error" class="input-error-message">
+              {% render 'icon-error' %}
+              <span>{{ form.errors.translated_fields['password'] | capitalize }} {{ form.errors.messages['password'] }}.</span>
+            </span>
+                            {%- endif -%}
+
+                            <p class="text-center">
+                                <button type="submit"
+                                        class="btn btn--full btn--primary btn--align-center opk-login__button">
+                                    <span>{{ section.settings.button_text }}</span></button>
+                            </p>
+                            <div class="text-center opk-login__texts">
+                                <p>
+                                    {{ section.settings.login_text }}
+                                    <a href="{{ routes.account_login_url }}" class='link--primary'>
+                                        {{ section.settings.link_text }}
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10"
+                                             fill="none">
+                                            <path d="M1 0.599609L5 4.59961L1 8.59961" stroke="#FF001F"
+                                                  stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </a>
+                                </p>
+                            </div>
+
+                        {% endform %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "t:sections.main-register.name",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "CREATE AN ACCOUNT"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text",
+      "default": "Enter your information below to proceed. If you already have an account, please log in instead."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Create an account"
+    },
+    {
+      "type": "text",
+      "id": "login_text",
+      "label": "Login question",
+      "default": "Already have an account?"
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Login link text",
+      "default": "Login"
+    }
+  ]
+}
+{% endschema %}

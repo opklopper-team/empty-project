@@ -1,0 +1,222 @@
+@import "../variables.scss";
+@import '../mixins.scss';
+
+.site-footer__rte_bottom {
+
+    @include breakPoints($mobileSM, min) {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+}
+
+.okp_footer {
+    box-shadow: 5px -5px 35px $gray;
+
+    .site-footer__item {        
+
+        @include breakPoints($laptop, $tablet) {
+            width: 100%;
+        }
+
+        @include breakPoints($tablet, min) {
+            margin-bottom: 32px;
+        }
+
+        @include breakPoints($tablet) {
+            margin-bottom: 18px; 
+        }
+    }
+
+    .head_title__text_bg--font_mod {
+        @include breakPoints($tablet) {
+            font-size: 24px
+        }
+    }
+
+    .follow-on-shop {
+        margin: 0;
+    }
+
+    .site-footer__item .selectors-form {
+        margin: 0;
+    }
+    
+    .selectors-form {
+        width: auto;
+
+        @include breakPoints($mobileSM) {
+            display: block;            
+        }
+
+        &:not(:last-child) {
+            @include breakPoints($mobileSM) {
+                margin-bottom: 16px;                          
+            }
+        }        
+    }
+
+    .site-footer__item .selectors-form .disclosure__toggle svg {
+        margin-left: 6px;
+    }
+
+    .selectors-form__item {
+        margin: 0;
+    }
+
+    .site-footer__rte {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.5;
+
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+
+        p {
+            font-size: inherit;
+            font-weight: inherit;
+        }
+    } 
+
+    .site-footer__linklist-item {
+        @include breakPoints($tablet, min) {
+            padding-bottom: 13px;
+        }
+
+        @include breakPoints($tablet) {
+            padding-bottom: 8px;
+        }
+    }
+
+    .h5 {
+        margin: 0;
+        &:not(:last-child) { 
+            @include breakPoints($tablet, min) {
+                margin-bottom: 22px;
+            }
+
+            @include breakPoints($tablet) {
+                margin-bottom: 16px;
+            }
+         }
+    }
+
+    .site-footer__item-inner--newsletter .site-footer__rte + .site-footer__newsletter {
+        padding-top: 10px;
+    }
+
+    .newsletter__submit.btn.btn--primary {
+        background-color: $orange;
+
+        &:after {
+            background-color: $dark_orange!important;          
+        }
+    }
+
+    .site-footer__item .selectors-form .disclosure__toggle {
+       padding: 4px 12px; 
+       min-height: 36px;    
+    }
+
+    .site-footer__newsletter {
+        .newsletter__input {
+            color: $black!important;
+
+            &::placeholder {
+                color: $gray!important;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+
+    .site-footer__bottom_content {
+        @include breakPoints($tablet) {
+            padding-top: 14px;
+        }
+    }
+
+    .social-icons__link {
+        &--email svg {
+            fill: transparent !important;
+        }
+    }
+}
+
+.footer_bg__pic {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;   
+    
+    &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.19), rgba(30, 29, 29, 0));
+        backdrop-filter: blur(21px);        
+        content: '';
+    }
+}
+
+.footer_bg {
+    position: unset;
+
+    &:not(.footer_bg--mob) {
+        @include breakPoints($tablet) {
+            display: none;  
+        }       
+    }
+
+    &.footer_bg--mob {
+        @include breakPoints($tablet, min) {
+            display: none;
+        }
+    }
+}
+
+.okp_footer__contacts {
+    display: flex;
+    align-items: center;
+    margin: 0 -10px -10px 0;    
+}
+
+.okp_footer__contacts_item {
+    padding: 0 10px 10px 0;
+}
+
+.okp_footer__contacts_email,
+.okp_footer__contacts_phone {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 24px;
+    padding: 4px 14px;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    background-color: $green;
+    color: $black;
+    border-radius: 16px;
+}
+
+.okp_footer__copyright {
+    flex: auto;
+
+    @include breakPoints($tablet) {
+        padding-left: 22px;
+        margin-bottom: 12px;
+    }
+}
+
+

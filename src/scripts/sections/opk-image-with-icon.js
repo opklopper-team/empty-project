@@ -1,0 +1,1 @@
+import '../../styles/sections/opk-image-with-icon.scss';
