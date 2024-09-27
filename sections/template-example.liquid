@@ -2,3 +2,18 @@
 
 
 <script src="{{ 'template-example.js' | asset_url }}" type="module" defer></script>
+
+{% schema %}
+    {
+        "name": "Example",
+        "class": "section-example",
+        "tag": "section",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title"
+            }
+        ]
+    }
+{% endschema %}
