@@ -1,5 +1,5 @@
 {
-    "name": "padel_2_gether",
+    "name": "project_name",
     "type": "module",
     "scripts": {
         "watch": "webpack --mode=development --watch",
@@ -28,9 +28,5 @@
         "last 2 version",
         "not dead",
         "iOS >= 14"
-    ],
-    "dependencies": {
-        "@fancyapps/ui": "^5.0.36",
-        "swiper": "^11.1.14"
-    }
+    ]
 }

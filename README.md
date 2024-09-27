@@ -1,11 +1,11 @@
 ## How to install project
-``` git clone https://github.com/opklopper-team/padel-2-gether.git . ```  
+``` git clone https://github.com/opklopper-team/{{PROJECT_NAME}}.git . ```  
 ``` git checkout -b branchName ```  
 ``` npm install ``` or ``` npm i ```
 
 ## Project terminal commands
 Use shopify the dev command to run shopify dev server (without live reload)  
-``` shopify theme dev --live-reload=off -s 6e1518.myshopify.com ```
+``` shopify theme dev --live-reload=off -s {{PROJECT_ADMIN_URL_NAME}}.myshopify.com ```
 
 Start gulp and webpack watcher (for building sass files to css and js files to minimized version):  
 To build all css and js files use this command:  
@@ -18,7 +18,7 @@ To pull all changes that you made in customizer use shopify command:
 ## How we run the project for develop
 We use 3 console windows (for shopify cli, npm watcher and github merges).  
 These two commands is enought for comfortable work:  
-1) ``` shopify theme dev --live-reload=off -s 6e1518.myshopify.com ```
+1) ``` shopify theme dev --live-reload=off -s {{PROJECT_ADMIN_URL_NAME}}.myshopify.com ```
 2) ``` npm run watch ```
 
 ## What is new in structure?

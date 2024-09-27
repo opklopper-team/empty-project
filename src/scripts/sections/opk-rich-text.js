@@ -1,1 +1,0 @@
-import '../../styles/sections/opk-rich-text.scss';

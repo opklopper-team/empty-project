@@ -8,64 +8,11 @@
 * ------------------------------------------------------------
 */
 {
-  "name": "t:sections.footer.name",
+  "name": "footer",
   "type": "footer",
   "sections": {
     "footer": {
-      "type": "opk-footer",
-      "blocks": {
-        "cc6c26ca-0560-4408-a15d-4fdb87fc8a04": {
-          "type": "text",
-          "settings": {
-            "title": "Over Padel2Gether",
-            "text": "<p>Padel2Gether is de padelcommunity van het Westland en omstreken. Wij hebben als doel om padel spelend Westland en omstreken bij elkaar te brengen.</p>",
-            "show_social_icons": true,
-            "enable_follow_on_shop": true,
-            "show_locale_selector": false,
-            "show_currency_selector": true,
-            "show_email": "true"
-          }
-        },
-        "c87ff8c9-986c-414f-b683-8405ecfe8cf9": {
-          "type": "link_list",
-          "settings": {
-            "title": "Customer Care",
-            "menu": "footer-menu"
-          }
-        },
-        "74c8113b-d327-4497-91fc-d188b970d6a6": {
-          "type": "newsletter",
-          "settings": {
-            "title": "Keep in Touch",
-            "text": "<p>Subscribe to our newsletter to receive updates on new products and exclusive subscriber-only offers.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "cc6c26ca-0560-4408-a15d-4fdb87fc8a04",
-        "c87ff8c9-986c-414f-b683-8405ecfe8cf9",
-        "74c8113b-d327-4497-91fc-d188b970d6a6"
-      ],
-      "settings": {
-        "footer_bg": "shopify://shop_images/footer-img.jpg",
-        "footer_bg_mob": "shopify://shop_images/footer-bg-mob.jpg",
-        "bg_opacity": 100,
-        "email_text": "info@padel2gether.nl",
-        "phone_number": "+31 6 21490829",
-        "show_copyright_note": true,
-        "show_payment_icons": true,
-        "color_footer_bg": "#000000",
-        "color_footer_headings": "#ffffff",
-        "color_footer_text": "#ebebeb",
-        "color_footer_links": "#cccccc",
-        "color_footer_links_hover": "#fb5f1b",
-        "call_to_action_block_bg": "#ffffff",
-        "call_to_action_block_icon_color": "#cccccc",
-        "call_to_action_block_heading_color": "#cccccc",
-        "call_to_action_block_text_color": "#cccccc",
-        "social_icons_color": "#fb5f1b",
-        "social_icons_bg": "#2b2b2b"
-      }
+      "type": "footer",
     }
   },
   "order": [

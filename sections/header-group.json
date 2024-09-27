@@ -1,48 +1,18 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
-  "name": "t:sections.header.name",
+  "name": "header",
   "type": "header",
   "sections": {
     "header": {
-      "type": "opk-header",
-      "blocks": {
-        "mega_menu_2_64Ebgy": {
-          "type": "mega_menu_2",
-          "settings": {
-            "menu_item": "catalog",
-            "image_1": "shopify:\/\/shop_images\/Rectangle_3.jpg",
-            "image_2": "shopify:\/\/shop_images\/megamenu-2.jpg",
-            "image_3": "shopify:\/\/shop_images\/megamenu-3.jpg",
-            "image_4": "shopify:\/\/shop_images\/megamenu-4.jpg",
-            "image_5": "shopify:\/\/shop_images\/megamenu-5.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "mega_menu_2_64Ebgy"
-      ],
-      "settings": {
-        "align_logo": "inline_el",
-        "enable_top_header": false,
-        "enable_overlap_header": false,
-        "enable_sticky_header": false,
-        "header_fallback_image_opacity": 100,
-        "enable_header_fallback_image": false,
-        "show_top_line_separator": false,
-        "logo": "shopify:\/\/shop_images\/logo.svg",
-        "logo_max_width": 165,
-        "main_linklist": "new-header",
-        "main_linklist_style": "uppercase",
-        "email_text": "info@padel2gether.nl",
-        "phone_number": "+31 6 21490829",
-        "show_currency_selector": true,
-        "show_locale_selector": false,
-        "top_navigation_linklist": "",
-        "categories_linklist": "",
-        "show_search_filter": false,
-        "enable_live_search": true,
-        "search_popular_searches": "",
-        "search_popular_products": ""
-      }
+      "type": "header",
     }
   },
   "order": [
