@@ -1,5 +1,5 @@
 @import '../variables.scss';
-@import '../mixins.scss';
+@import '../mixins/global-mixins.scss';
 @import '../snippets/drop-menu.scss';
 
 .header {
@@ -14,7 +14,7 @@
 .header__wrapper {
     margin: 0 auto;
     width: 100%;
-    max-width: $pageWidth;
+    max-width: var(--main-wrapper);
 }
 
 .header__row {

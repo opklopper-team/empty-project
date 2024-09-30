@@ -4,9 +4,58 @@
 /* ==================================================== ADAPTIVE =================================================== */
 /* ===================================================== FONTS ===================================================== */
 /* ===================================================== COLORS ==================================================== */
-/* ==================================================== LAYOUTS ==================================================== */
+/* ==================================================== ADAPTIVE =================================================== */
+/* ===================================================== FONTS ===================================================== */
+/* ===================================================== COLORS ==================================================== */
+.ui_components__wrap {
+  max-width: var(--main-wrapper);
+  margin: 0 auto;
+  width: 100%;
+}
+
 .ui_components__title {
   text-align: center;
   font-size: 30px;
   font-weight: 700;
+}
+
+.ui_components__btn {
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #000000;
+  transition: background-color 0.3s ease;
+  border: 1px solid #000000;
+  text-transform: uppercase;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  padding: 0 20px;
+  min-height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  border-radius: 8px;
+}
+.ui_components__btn[type=submit] {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.ui_components__btn:hover, .ui_components__btn:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+.ui_components__btn:disabled {
+  cursor: default;
+  pointer-events: none;
+}
+.ui_components__btn:hover {
+  background-color: transparent;
+  color: #000000;
+}
+.ui_components__btn:disabled {
+  background: gray;
+  color: #000000;
 }

@@ -1,6 +1,7 @@
 @import './variables.scss';
-@import './mixins.scss';
-@import './typography.scss';
+@import './mixins/global-mixins.scss';
+@import './mixins/typography.scss';
+@import './mixins/buttons.scss';
 
 .ui_components {
 
@@ -30,7 +31,9 @@
 }
 
 .ui_components__wrap {
-    
+    max-width: var(--main-wrapper);
+    margin: 0 auto;
+    width: 100%;
 }
 
 .ui_components__block {
@@ -45,5 +48,11 @@
 .ui_components__row {
 }
 
+.ui_components__item {
+
+}
+
 .ui_components__btn {
+    @include btn_style_black;
+    @include btn_size_normal;
 }
