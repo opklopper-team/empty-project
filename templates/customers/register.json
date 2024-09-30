@@ -1,10 +1,12 @@
 {
-	"sections": {
-		"template-example": {
-			"type": "template-example"
-		}
-	},
-	"order": [
-		"template-example"
-	]
+  "sections": {
+    "template-example": {
+      "type": "template-example",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "template-example"
+  ]
 }

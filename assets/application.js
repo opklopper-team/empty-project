@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
   \************************************/
 /***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_application_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/application.scss */ \"./src/styles/application.scss\");\n\ndocument.addEventListener(\"DOMContentLoaded\", () => {});\n\n//# sourceURL=webpack://project_name/./src/scripts/application.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_application_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/application.scss */ \"./src/styles/application.scss\");\n\n\n//# sourceURL=webpack://project_name/./src/scripts/application.js?");
 
 /***/ })
 
