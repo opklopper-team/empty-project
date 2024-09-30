@@ -1,0 +1,58 @@
+@import './variables.scss';
+@import './mixins/global-mixins.scss';
+@import './mixins/typography.scss';
+@import './mixins/buttons.scss';
+
+.ui_components {
+
+    h1 {
+
+    }
+
+    h2 {
+
+    }
+
+    h3 {
+
+    }
+
+    h4 {
+
+    }
+
+    h5 {
+
+    }
+
+    h6 {
+
+    }
+}
+
+.ui_components__wrap {
+    max-width: var(--main-wrapper);
+    margin: 0 auto;
+    width: 100%;
+}
+
+.ui_components__block {
+}
+
+.ui_components__title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.ui_components__row {
+}
+
+.ui_components__item {
+
+}
+
+.ui_components__btn {
+    @include btn_style_black;
+    @include btn_size_normal;
+}
