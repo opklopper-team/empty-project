@@ -1,28 +1,10 @@
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
-    "sections": {
-      "main": {
-        "type": "main-login",
-        "settings": {
-          "text": "If you have an account with us, please log in.",
-          "recovery_text": "Forgot your password?",
-          "register_text": "Don’t have an account?",
-          "link_text": "Create an account",
-          "reset_title": "RESET PASSWORD",
-          "reset_text": "We will send you an email to reset your password"
-        }
-      }
-    },
-    "order": [
-      "main"
-    ]
-  }
-  
+	"sections": {
+		"template-example": {
+			"type": "template-example"
+		}
+	},
+	"order": [
+		"template-example"
+	]
+}
