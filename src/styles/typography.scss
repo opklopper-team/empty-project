@@ -1,255 +1,255 @@
-@import "./variables.scss";
-@import './mixins.scss';
+// @import "./variables.scss";
+// @import './mixins.scss';
 
-@mixin title {
-    line-height: 0.9;
-    letter-spacing: -0.004em;    
+// @mixin title {
+//     line-height: 0.9;
+//     letter-spacing: -0.004em;    
 
-    @include breakPoints($laptop, min) {
-        font-size: 100px;
-    }
+//     @include breakPoints($laptop, min) {
+//         font-size: 100px;
+//     }
 
-    @include breakPoints($laptop, $tablet) {
-        font-size: 76px;
-    }
+//     @include breakPoints($laptop, $tablet) {
+//         font-size: 76px;
+//     }
 
-    @include breakPoints($tablet) {
-        font-size: 54px;
-    }
-}
+//     @include breakPoints($tablet) {
+//         font-size: 54px;
+//     }
+// }
 
-@mixin titleMod {
-    @include breakPoints($tablet, min) {
-        font-size: 60px;
-    }
+// @mixin titleMod {
+//     @include breakPoints($tablet, min) {
+//         font-size: 60px;
+//     }
 
-    @include breakPoints($tablet, max) {
-        font-size: 34px;
-    }
-}
+//     @include breakPoints($tablet, max) {
+//         font-size: 34px;
+//     }
+// }
 
-.head_title {
+// .head_title {
 
-}
+// }
 
-.head_title__text {
-    position: relative;
-    font-family: $font_nexa_black;
-    @include title;
+// .head_title__text {
+//     position: relative;
+//     font-family: $font_nexa_black;
+//     @include title;
     
-    & {
-        color: $white;
-        margin-bottom: 20px;
-    }
+//     & {
+//         color: $white;
+//         margin-bottom: 20px;
+//     }
 
-    &.head_title__text--font_mod {
-        @include breakPoints($tablet) {
-            font-size: 34px
-        }
-    }
+//     &.head_title__text--font_mod {
+//         @include breakPoints($tablet) {
+//             font-size: 34px
+//         }
+//     }
 
-    &.head_title__text--medium {
-        @include titleMod;
-    }
+//     &.head_title__text--medium {
+//         @include titleMod;
+//     }
    
-}
+// }
 
-.head_title__shadow {
-    @include title;
+// .head_title__shadow {
+//     @include title;
     
-    & {
-        position: absolute;
-        bottom: -0.02em;
-        left: -0.02em;
-        font-family: $font_nexa_shadow;
-        color: $green;
-    }
+//     & {
+//         position: absolute;
+//         bottom: -0.02em;
+//         left: -0.02em;
+//         font-family: $font_nexa_shadow;
+//         color: $green;
+//     }
 
-    .head_title__text--font_mod & {
-        @include breakPoints($tablet) {
-            font-size: 34px;
-        }
-    }
+//     .head_title__text--font_mod & {
+//         @include breakPoints($tablet) {
+//             font-size: 34px;
+//         }
+//     }
 
-    &.head_title__shadow--medium {
-        @include titleMod;
-    }    
-}
+//     &.head_title__shadow--medium {
+//         @include titleMod;
+//     }    
+// }
 
-.head_title__text_bg {
-    display: inline-flex;
-    flex-wrap: wrap;
-    font-family: $font_nexa;
+// .head_title__text_bg {
+//     display: inline-flex;
+//     flex-wrap: wrap;
+//     font-family: $font_nexa;
 
-    line-height: 1.5;
-    letter-spacing: -0.01em;
+//     line-height: 1.5;
+//     letter-spacing: -0.01em;
 
-    &:not(.head_title__text_bg--font_mod) {
-        color: $blue;
+//     &:not(.head_title__text_bg--font_mod) {
+//         color: $blue;
 
-        @include breakPoints($tablet, min) {
-            font-size: 47px;            
-        }
+//         @include breakPoints($tablet, min) {
+//             font-size: 47px;            
+//         }
 
-        @include breakPoints($tablet) {
-            font-size: 34px;
-            line-height: 1.2;
-        }
-    }
+//         @include breakPoints($tablet) {
+//             font-size: 34px;
+//             line-height: 1.2;
+//         }
+//     }
 
-    &.head_title__text_bg--font_mod {
-        font-family: $font_nexa_black;
-        color: $blue;
-        font-weight: 700;
+//     &.head_title__text_bg--font_mod {
+//         font-family: $font_nexa_black;
+//         color: $blue;
+//         font-weight: 700;
 
-        @include breakPoints($tablet, min) {
-            font-size: 24px;
-        }
+//         @include breakPoints($tablet, min) {
+//             font-size: 24px;
+//         }
 
-        @include breakPoints($tablet) {
-            font-size: 18px
-        }
-    }
+//         @include breakPoints($tablet) {
+//             font-size: 18px
+//         }
+//     }
 
-    &:not(:last-child) {
-        margin-bottom: 13px;
-    }
-}
+//     &:not(:last-child) {
+//         margin-bottom: 13px;
+//     }
+// }
 
-.head_title__word {
-    z-index: 1;
-    position: relative;
-    padding: 0 0.18em;
+// .head_title__word {
+//     z-index: 1;
+//     position: relative;
+//     padding: 0 0.18em;
 
-    &::before {
-        z-index: -1;
-        position: absolute;
+//     &::before {
+//         z-index: -1;
+//         position: absolute;
 
-        left: -6px;
-        height: 1.6em;
-        width: calc(100% + 6px);
-        content: '';
+//         left: -6px;
+//         height: 1.6em;
+//         width: calc(100% + 6px);
+//         content: '';
 
-        @include breakPoints($tablet, min) {
-            top: -0.1em;
-        }
+//         @include breakPoints($tablet, min) {
+//             top: -0.1em;
+//         }
 
-        @include breakPoints($tablet) {
-            top: -0.3em;
-        }
+//         @include breakPoints($tablet) {
+//             top: -0.3em;
+//         }
 
-        .head_title__text_bg--font_mod & {
-            top: -0.1em;
-        }
-    }
+//         .head_title__text_bg--font_mod & {
+//             top: -0.1em;
+//         }
+//     }
 
-    &::after {
-        position: absolute;
-        right: -5px;
-        width: 12px;
-        content: '';
+//     &::after {
+//         position: absolute;
+//         right: -5px;
+//         width: 12px;
+//         content: '';
 
-        @include breakPoints($tablet, min) {
-            top: -0.04em;
-            height: 1.5em;
-        }
+//         @include breakPoints($tablet, min) {
+//             top: -0.04em;
+//             height: 1.5em;
+//         }
 
-        @include breakPoints($tablet) {
-            top: -0.08em;
-            height: 1.26em;
-        }
+//         @include breakPoints($tablet) {
+//             top: -0.08em;
+//             height: 1.26em;
+//         }
 
-        .head_title__text_bg--font_mod & {
-            top: -0.01em;
-            right: -5px;
-            height: 100%;
-            width: 12px;
-        }
-    }
+//         .head_title__text_bg--font_mod & {
+//             top: -0.01em;
+//             right: -5px;
+//             height: 100%;
+//             width: 12px;
+//         }
+//     }
 
-    .head_title__text_bg--font_mod & {
-        padding: 0 0.25em;
+//     .head_title__text_bg--font_mod & {
+//         padding: 0 0.25em;
 
-        &::before {
-            top: -0.2em;
-            left: -6px;
-            height: 124%;
-        }
+//         &::before {
+//             top: -0.2em;
+//             left: -6px;
+//             height: 124%;
+//         }
 
-        &::after {
-        }
-    }
-}
+//         &::after {
+//         }
+//     }
+// }
 
-.opk__subtitle_wrap {
-    &:not(:last-child) {
-        @include breakPoints($tablet, min) {
-            margin-bottom: 8px;
-        }
+// .opk__subtitle_wrap {
+//     &:not(:last-child) {
+//         @include breakPoints($tablet, min) {
+//             margin-bottom: 8px;
+//         }
 
-        @include breakPoints($tablet) {
-            margin-bottom: 16px;
-        }
-    }   
-}
+//         @include breakPoints($tablet) {
+//             margin-bottom: 16px;
+//         }
+//     }   
+// }
 
-.opk__subtitle {
-    @include subtitle(inherit);
-}
+// .opk__subtitle {
+//     @include subtitle(inherit);
+// }
 
-.opk_account__title {
-    z-index: 0;
-    position: relative;
-    padding: 0 0.4em;
-    display: inline-flex;
+// .opk_account__title {
+//     z-index: 0;
+//     position: relative;
+//     padding: 0 0.4em;
+//     display: inline-flex;
     
-    text-transform: uppercase;
-    font-family: $font_nexa;
-    font-weight: 900;
-    line-height: 1.4;
-    letter-spacing: -1px;
-    color: $blue;
+//     text-transform: uppercase;
+//     font-family: $font_nexa;
+//     font-weight: 900;
+//     line-height: 1.4;
+//     letter-spacing: -1px;
+//     color: $blue;
 
-    margin-bottom: 34px;   
+//     margin-bottom: 34px;   
 
-    &::before {
-        z-index: -1;
-        position: absolute;
-        top: -0.1em;
-        left: -6px;
-        height: 1.6em;
-        width: calc(100% + 6px);
-        content: "";
-    }     
+//     &::before {
+//         z-index: -1;
+//         position: absolute;
+//         top: -0.1em;
+//         left: -6px;
+//         height: 1.6em;
+//         width: calc(100% + 6px);
+//         content: "";
+//     }     
 
-    @include breakPoints($laptop, min) {
-        font-size: 47px;
-    }    
+//     @include breakPoints($laptop, min) {
+//         font-size: 47px;
+//     }    
 
-    @include breakPoints($laptop) {
-        font-size: 34px;
-    }    
-}
+//     @include breakPoints($laptop) {
+//         font-size: 34px;
+//     }    
+// }
 
-/*
+// /*
 
-<div class="opk__subtitle_wrap">
-    <span class='opk__subtitle'>{{ section.settings.subtitle  }}</span>
-</div>
+// <div class="opk__subtitle_wrap">
+//     <span class='opk__subtitle'>{{ section.settings.subtitle  }}</span>
+// </div>
 
-#shopify-section-{{ section.id }} .opk__subtitle {
-      color: {{ section.settings.subtitle_color }};
-   }
+// #shopify-section-{{ section.id }} .opk__subtitle {
+//       color: {{ section.settings.subtitle_color }};
+//    }
 
-#shopify-section-{{ section.id }} .opk__subtitle::before {
-    background-color: {{ section.settings.subtitle_color }};
-}
+// #shopify-section-{{ section.id }} .opk__subtitle::before {
+//     background-color: {{ section.settings.subtitle_color }};
+// }
 
-{
-    "type": "color",
-    "id": "subtitle_color",
-    "label": "Color for subtitle",
-    "default": "#FB5F1B"
-},
+// {
+//     "type": "color",
+//     "id": "subtitle_color",
+//     "label": "Color for subtitle",
+//     "default": "#FB5F1B"
+// },
 
-*/
+// */
