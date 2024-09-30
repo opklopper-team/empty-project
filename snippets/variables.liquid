@@ -1,4 +1,10 @@
 <style>
+    :root {
+        {% if settings.main_wrapper_width != blank %}
+            --main-wrapper: {{ settings.main_wrapper_width }};
+        {% endif %}
+    }
+
     body {
         {% if settings.body_text_color != blank %}
             color: {{ settings.body_text_color }};
