@@ -2,6 +2,24 @@
 @import '../mixins.scss';
 @import '../snippets/example-snippet.scss';
 
-.template-example {
+.example {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
+}
+
+.example__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.example__title {
+    font-size: 60px;
+    font-weight: 700;
+    text-align: center;
+    background-color: $violet;
+    color: $white;
 }
