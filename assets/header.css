@@ -71,7 +71,7 @@
   }
 }
 @media screen and (min-width: 768px) {
-  .drop:hover .drop_menu {
+  .active .drop_menu, .drop:hover .drop_menu {
     opacity: 1;
   }
 }
@@ -105,8 +105,11 @@
 
 .header {
   width: 100%;
-  padding: 50px 25px;
+  height: var(--heigth-header);
+  padding: 0 var(--gl-indent);
   background-color: blanchedalmond;
+  display: flex;
+  align-items: center;
 }
 
 .header__wrapper {
@@ -119,16 +122,82 @@
   display: flex;
   align-items: center;
 }
+@media screen and (max-width: 767px) {
+  .header__row {
+    justify-content: space-between;
+  }
+}
 
 .header__nav {
   flex: auto;
 }
+@media screen and (min-width: 768px) {
+  .header__nav {
+    padding: 0 16px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header--scroll_state .header__nav {
+    height: 100svh;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header__nav {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100svh;
+    background-color: #ffffff;
+    padding: 100px var(--gl-indent) 28px;
+    transition: transform 0.5s ease;
+    pointer-events: none;
+    transform: translateX(-100%);
+  }
+}
+@media screen and (max-width: 767px) {
+  .header__nav::after {
+    content: "";
+    position: absolute;
+    top: var(--height-header);
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #ffffff;
+  }
+}
+@media screen and (max-width: 767px) {
+  .body--open_menu_state .header__nav {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0%);
+  }
+}
 
-.header__nav_list {
+@media screen and (min-width: 768px) {
+  .header__nav_list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header__nav_item:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.header__aside {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
+}
+
+.header__aside_list_wrap:not(:last-child) {
+  margin-right: 16px;
 }
 
 .header__menu_trigger {
@@ -150,7 +219,7 @@
   overflow: hidden;
   transition: transform 0.3s ease;
   will-change: transform;
-  background-color: #ffffff;
+  background-color: #000000;
 }
 .header__menu_trigger::before {
   content: "";

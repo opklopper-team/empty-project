@@ -4,8 +4,11 @@
 
 .header {
     width: 100%;
-    padding: 50px 25px;
+    height: var(--heigth-header);
+    padding: 0 var(--gl-indent);
     background-color: blanchedalmond;
+    display: flex;
+    align-items: center;
 }
 
 .header__wrapper {
@@ -17,6 +20,10 @@
 .header__row {
     display: flex;
     align-items: center;
+
+    @include breakPoints($tablet) {
+        justify-content: space-between;    
+    }
 }
 
 .header__logo {
@@ -30,27 +37,86 @@
 
 .header__nav {
     flex: auto;
+
+    @include breakPoints($tablet, min) {
+        padding: 0 16px;       
+    }
+
+    .header--scroll_state & {
+        @include breakPoints($tablet) {
+            height: 100svh;
+        }
+    }
+
+    @include breakPoints($tablet) {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;       
+
+        width: 100vw;
+        height: calc(100svh);
+
+        background-color: $white;
+        padding: 100px var(--gl-indent) 28px;
+        transition: transform 0.5s ease;
+        pointer-events: none;
+        transform: translateX(-100%);
+    }
+
+    &::after {
+        @include breakPoints($tablet) {
+            content: '';
+            position: absolute;
+            top: var(--height-header);
+            left: 0;
+
+            display: block;
+            width: 100%;
+            height: 1px;
+
+            background-color: $white;
+        }
+    }
+
+    .body--open_menu_state & {
+        @include breakPoints($tablet) {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateX(0%);
+        }
+    }
 }
 
-.header__nav_list {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    // margin: 0 -20px -20px 0;
+.header__nav_list {    
+    @include breakPoints($tablet, min) {
+        display: flex;   
+        gap: 20px;
+        flex-wrap: wrap; 
+        align-items: center;
+        justify-content: center;
+    }
 }
 
-.header__nav_item {
-    // padding: 0 20px 20px 0;
+.header__nav_item {  
+    &:not(:last-child) {
+        @include breakPoints($tablet) {
+            margin-bottom: 16px;           
+        }
+    }  
 }
 
 .header__nav_link {
 }
 
 .header__aside {
+    display: flex;
 }
 
 .header__aside_list_wrap {
+    &:not(:last-child) {
+        margin-right: 16px;
+    }
 }
 
 .header__aside_list {
@@ -92,7 +158,7 @@
         transition: transform 0.3s ease;
         will-change: transform;
 
-        background-color: $white;
+        background-color: $black;
     }
 
     &::before {

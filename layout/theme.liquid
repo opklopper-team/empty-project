@@ -58,8 +58,9 @@
 	{{ content_for_header }}
 </head>
 <body class="template-{{ request.page_type | handle }} {% if settings.hide_cart_icon %} hide_cart_icon {% endif %} {% if settings.hide_cart_buttons %} hide_cart_buttons {% endif %} {% if settings.hide_prices %} hide_prices {% endif %} ">
-	{% sections 'header-group' %}
-	<main role="main">{{ content_for_layout }}</main>
+	<div class="placeholder"></div>
+	{% sections 'header-group' %}	
+	<main class="main" role="main">{{ content_for_layout }}</main>
 	{% sections 'footer-group' %}
 	<script src="{{ 'application.js' | asset_url }}" defer="defer"></script>
 </body>

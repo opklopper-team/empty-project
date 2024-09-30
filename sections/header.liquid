@@ -1,10 +1,25 @@
 <link rel="stylesheet" href="{{ 'header.css' | asset_url }}">
 
+{% if section.settings.header_fix %}
+	<style>
+		.header {
+			z-index: 100;
+			position: fixed;
+			top: 0;
+			left: 0;
+		}
+
+		.main {
+			padding-top: var(--heigth-header);
+		}
+	</style>
+{% endif %}
+
 <div class="header__wrapper">
 	<div class="header__row">
         <a href="{{routes.root_url}}" class="header__logo">
-            {%- if section.settings.header_logo_id != blank -%}
-                <img loading="lazy" width="auto" height="auto" src="{{section.settings.header_logo_id |  image_url }}" alt="{{shop.name}}" class="header__logo_img">
+            {%- if section.settings.logo != blank -%}
+                <img loading="lazy" width="auto" height="auto" src="{{section.settings.logo |  image_url }}" alt="{{shop.name}}" class="header__logo_img">
             {%- else -%}
                 <span class="header__logo_text">{{ shop.name }}</span>
             {%- endif -%}            
@@ -75,13 +90,19 @@
 {% schema %}
 {
 	"name": "Header",
-	"class": "header",
+	"class": "header js-header",
 	"tag": "header",
 	"settings": [
 		{
 			"type": "image_picker",
-			"id": "header_logo_id",
+			"id": "logo",
 			"label": "Header logo"
+		},
+		{
+			"type": "checkbox",
+			"id": "header_fix",
+			"label": "Fix header",
+			"default": true                
 		},
 		{
 			"type": "link_list",
