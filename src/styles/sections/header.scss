@@ -1,6 +1,132 @@
 @import '../variables.scss';
 @import '../mixins.scss';
+@import '../snippets/drop-menu.scss';
 
 .header {
     width: 100%;
 }
+
+.header__wrapper {
+    margin: 0 auto;
+    width: 100%;
+    max-width: $pageWidth;
+}
+
+.header__row {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+}
+
+.header__logo_img {
+}
+
+.header__logo_text {
+}
+
+.header__nav {
+    flex: auto;
+}
+
+.header__nav_list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    // margin: 0 -20px -20px 0;
+}
+
+.header__nav_item {
+    // padding: 0 20px 20px 0;
+}
+
+.header__nav_link {
+}
+
+.header__aside {
+}
+
+.header__aside_list_wrap {
+}
+
+.header__aside_list {
+}
+
+.header__aside_item {
+}
+
+.header__aside_link {
+}
+
+.header__aside_prod_count {
+}
+
+.header__menu_trigger {
+    $burgerHeight: 14px;
+    background-color: transparent;
+
+    position: relative;
+    z-index: 20;
+
+    width: 26px;
+    height: $burgerHeight;
+
+    cursor: pointer;
+
+    &::before,
+    &::after,
+    span {
+        position: absolute;
+        left: 0;
+        top: 50%;
+
+        width: 100%;
+        height: 2px;
+        border-radius: 2px;
+        overflow: hidden;
+
+        transition: transform 0.3s ease;
+        will-change: transform;
+
+        background-color: $white;
+    }
+
+    &::before {
+        content: '';
+        transform: translateY(calc(#{$burgerHeight} / 2 * -1));
+    }
+
+    &::after {
+        content: '';
+        transform: translateY(calc(#{$burgerHeight} / 2));
+    }
+
+    .body--open_menu_state & {
+        span {
+            transform: scale(0);
+        }
+
+        &::before {
+            transform: rotate(-45deg);
+        }
+
+        &::after {
+            transform: rotate(45deg);
+        }              
+    }
+
+    .body--open_menu_state .header--scroll_state & {
+        transform: translateY(0);
+    }
+
+    @include breakPoints($tablet, min) {
+        display: none;
+    }
+
+    @include breakPoints($tablet) {
+        display: block;
+    }
+}
+
