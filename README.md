@@ -1,5 +1,5 @@
 ## How to install project
-``` git clone https://github.com/opklopper-team/{{PROJECT_NAME}}.git . ```  
+``` git clone https://github.com/opklopper-team/empty-project.git . ```  
 ``` git checkout -b branchName ```  
 ``` npm install ``` or ``` npm i ```
 

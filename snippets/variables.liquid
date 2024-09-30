@@ -1,0 +1,22 @@
+<style>
+    body {
+        {% if settings.body_text_color != blank %}
+            color: {{ settings.body_text_color }};
+        {% endif %}
+        {% if settings.body_bg_color != blank %}
+            background-color: {{ settings.body_bg_color }};
+        {% endif %}
+    }
+
+    a {
+        {% if settings.body_link_color != blank %}
+            color: {{ settings.body_link_color }};
+        {% endif %}
+    }
+
+    input {
+        {% if settings.form_text_color != blank %}
+            color: {{ settings.form_text_color }};
+        {% endif %}
+    }
+</style>

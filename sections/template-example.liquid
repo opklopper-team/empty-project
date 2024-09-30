@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{{ 'template-example.css' | asset_url }}">
+<link rel="stylesheet" href="{{ "template-example.css" | asset_url }}">
 
 <div class="example__wrapper">
     <h2 class="example__title">{{ section.settings.title }}</h2>
@@ -16,6 +16,11 @@
                 "type": "text",
                 "id": "title",
                 "label": "Title"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Example"
             }
         ]
     }
