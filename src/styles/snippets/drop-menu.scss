@@ -64,6 +64,7 @@
         max-height: 0;
     }   
 
+    .active &,
     .drop:hover & {
         @include breakPoints($tablet, min) {
             opacity: 1;
