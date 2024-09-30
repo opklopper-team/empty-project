@@ -7,6 +7,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    padding: 50px 25px;
 }
 
 .example__wrapper {
@@ -20,6 +21,4 @@
     font-size: 60px;
     font-weight: 700;
     text-align: center;
-    background-color: $violet;
-    color: $white;
 }
