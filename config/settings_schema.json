@@ -19,6 +19,21 @@
 		]
 	},
 	{
+		"name": "Wrappers",
+		"settings": [
+			{
+				"type": "range",
+				"id": "main_wrapper_width",
+				"label": "Main wrapper width",
+				"min": 0,
+				"max": 1920,
+				"step": 20,
+				"unit": "px",
+				"default": 1440,
+			}
+		]
+	},
+	{
 		"name": "Colors",
 		"settings": [
 			{
@@ -48,6 +63,56 @@
 				"type": "color",
 				"id": "form_text_color",
 				"label": "Text"
+			}
+		]
+	},
+	{
+		"name": "Social media",
+		"settings": [
+			{
+				"type": "text",
+				"id": "social_twitter",
+				"label": "Facebook"
+			},
+			{
+				"type": "text",
+				"id": "social_facebook",
+				"label": "Facebook"
+			},
+			{
+				"type": "text",
+				"id": "social_linkedin",
+				"label": "LinkedIn"
+			},
+			{
+				"type": "text",
+				"id": "social_pinterest",
+				"label": "Pinterest"
+			},
+			{
+				"type": "text",
+				"id": "social_instagram",
+				"label": "Instagram"
+			},
+			{
+				"type": "text",
+				"id": "social_tumblr",
+				"label": "Tumblr"
+			},
+			{
+				"type": "text",
+				"id": "social_snapchat",
+				"label": "Snapchat"
+			},
+			{
+				"type": "text",
+				"id": "social_youtube",
+				"label": "YouTube"
+			},
+			{
+				"type": "text",
+				"id": "social_vimeo",
+				"label": "Vimeo"
 			}
 		]
 	}
