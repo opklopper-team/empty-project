@@ -5,9 +5,15 @@
       "settings": {
         "title": "Example title"
       }
+    },
+    "ui_components_cU4awy": {
+      "type": "ui-components",
+      "settings": {
+      }
     }
   },
   "order": [
-    "template-example"
+    "template-example",
+    "ui_components_cU4awy"
   ]
 }
