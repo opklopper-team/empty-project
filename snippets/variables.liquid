@@ -3,15 +3,24 @@
         {% if settings.main_wrapper_width != blank %}
             --main-wrapper: {{ settings.main_wrapper_width }}px;
         {% endif %}
+
+        {% if settings.form_text_color != blank %}
+            --form-text-color: {{ settings.form_text_color }};
+        {% else %}
+            --form-text-color: black;
+        {% endif %}
+
+        {% if settings.body_bg_color != blank %}
+            --bg-body-color: {{ settings.body_bg_color }};
+        {% else %}
+            --form-text-color: black;
+        {% endif %}
     }
 
     body {
         {% if settings.body_text_color != blank %}
             color: {{ settings.body_text_color }};
-        {% endif %}
-        {% if settings.body_bg_color != blank %}
-            background-color: {{ settings.body_bg_color }};
-        {% endif %}
+        {% endif %}        
     }
 
     a {
@@ -19,10 +28,5 @@
             color: {{ settings.body_link_color }};
         {% endif %}
     }
-
-    input {
-        {% if settings.form_text_color != blank %}
-            color: {{ settings.form_text_color }};
-        {% endif %}
-    }
+    
 </style>

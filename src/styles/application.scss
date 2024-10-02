@@ -3,6 +3,9 @@
 @import './variables.scss';
 @import './normalize.scss';
 @import './fonts.scss';
+@import './ui/buttons.scss';
+@import './ui/typography.scss';
+@import './ui/form-input.scss';
 
 /* ====================================================== ROOT ===================================================== */
 :root {
@@ -19,6 +22,8 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-family: $font_robota;
+    background-color: var(--bg-body-color);
 }
 
 .preloader {
