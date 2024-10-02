@@ -1,5 +1,5 @@
 {
-    "name": "allaboutinterior",
+    "name": "project_name",
     "type": "module",
     "scripts": {
         "watch": "webpack --mode=development --watch",
