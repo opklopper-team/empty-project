@@ -47,3 +47,10 @@ His functionality is to clean css code from default and useseless styles, also t
 ### variables.scss
 In this file we save all variables (like color or layout).  
 Import this file in every section file (he knows what to take, so don't be scary about performance).
+
+## How to name your commits
+To give for your comments some logic and structure you can use this prefixes and beggin your commit from them.
+All prefixes:
+- ```feat:``` - if something new (default).
+- ```fix:``` - if fixes.
+- ```conflicts:``` - if you only fix the conflicts.
