@@ -1,6 +1,6 @@
-@import '../variables.scss';
-@import '../mixins/global-mixins.scss';
-@import '../snippets/drop-menu.scss';
+@use '../variables.scss' as *;
+@use '../mixins/global-mixins.scss' as *;
+@use '../snippets/drop-menu.scss';
 
 .header {
     width: 100%;

@@ -1,7 +1,7 @@
-@import './variables.scss';
-@import './mixins/global-mixins.scss';
-@import './mixins/typography.scss';
-@import './mixins/buttons.scss';
+@use './variables.scss' as *;
+@use './mixins/global-mixins.scss' as *;
+@use './mixins/typography.scss' as *;
+@use './mixins/buttons.scss' as *;
 
 .ui_components {
 

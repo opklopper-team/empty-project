@@ -1,11 +1,11 @@
 /* ==================================================== IMPORTS ==================================================== */
 //application
-@import './variables.scss';
-@import './normalize.scss';
-@import './fonts.scss';
-@import './ui/buttons.scss';
-@import './ui/typography.scss';
-@import './ui/form-input.scss';
+@use './variables.scss' as *;
+@use './normalize.scss';
+@use './fonts.scss';
+@use './ui/buttons.scss';
+@use './ui/typography.scss';
+@use './ui/form-input.scss';
 
 /* ====================================================== ROOT ===================================================== */
 :root {

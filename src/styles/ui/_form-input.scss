@@ -1,5 +1,4 @@
-// @import '../variables.scss';
-@import '../mixins/form-input';
+@use '../mixins/form-input' as *;
 
 .form_el_label {
     @include form_el_label;

@@ -1,4 +1,4 @@
-@import '../variables.scss';
+@use '../variables.scss' as *;
 
 @mixin st_btn {
 	display: inline-flex;

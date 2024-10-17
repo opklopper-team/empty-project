@@ -1,3 +1,5 @@
+@use 'sass:string';
+
 @mixin breakPoints($width, $value: max) {
     @if $value == min {
         @media screen and (min-width: $width) {
@@ -21,9 +23,9 @@
     $style: normal
 ) {
     @font-face {
-        font-family: quote($font_name);
-        src: url('../../assets/' + $file-name + '.woff2') format('woff2'),
-            url('../../assets/' + $file-name + '.woff') format('woff');
+        font-family: string.quote($font_name);
+        src: url('../../assets/#{$file_name}.woff2') format('woff2'),
+            url('../../assets/#{$file_name}.woff') format('woff');
         font-weight: $weight;
         font-style: $style;
         font-display: swap;

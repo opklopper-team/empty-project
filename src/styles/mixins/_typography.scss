@@ -1,5 +1,5 @@
-@import "../variables.scss";
-@import './global-mixins.scss';
+@use "../variables.scss" as *;
+@use './global-mixins.scss' as *;
 
 @mixin h1 {        
     @include breakPoints($tablet, min) {

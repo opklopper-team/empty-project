@@ -1,6 +1,6 @@
-@import '../variables.scss';
-@import '../mixins/global-mixins.scss';
-@import '../snippets/example-snippet.scss';
+@use '../variables.scss' as *;
+@use '../mixins/global-mixins.scss' as *;
+@use '../snippets/example-snippet.scss';
 
 .example {
     display: flex;

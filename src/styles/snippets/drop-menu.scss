@@ -1,5 +1,5 @@
-@import '../mixins/global-mixins.scss';
-@import '../variables.scss';
+@use '../mixins/global-mixins.scss' as *;
+@use '../variables.scss' as *;
 
 .drop {
     position: relative;    
