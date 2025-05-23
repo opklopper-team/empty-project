@@ -2,9 +2,10 @@
     "name": "project_name",
     "type": "module",
     "scripts": {
-        "watch": "webpack --mode=development --watch",
         "dev": "webpack --mode=development",
-        "build": "webpack --mode=production"
+        "build": "webpack --mode=production",
+        "watch": "webpack --mode=development --watch",
+        "watchBUILD": "webpack --mode=production --watch"
     },
     "license": "ISC",
     "devDependencies": {
