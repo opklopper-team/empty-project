@@ -5,6 +5,8 @@ import { fileURLToPath } from 'url';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import * as sass from 'sass';
 
+//=====================================================================================================================
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -17,6 +19,8 @@ readdirSync('./src/scripts/sections', { withFileTypes: true }).forEach(file => {
     }
 });
 
+//=====================================================================================================================
+
 export default {
     resolve: {
         extensions: ['.js'],
@@ -26,12 +30,10 @@ export default {
         path: path.resolve(__dirname, 'assets'),
         filename: '[name].js'
     },
-    plugins: [
-        new MiniCssExtractPlugin({
-            filename: '[name].css',
-            chunkFilename: '[id].css'
-        })
-    ],
+    plugins: [new MiniCssExtractPlugin({
+        filename: '[name].css',
+        chunkFilename: '[id].css'
+    })],
     module: {
         rules: [
             {
@@ -56,8 +58,10 @@ export default {
                         options: {
                             postcssOptions: {
                                 plugins: [
-                                    'postcss-preset-env',
-                                    ['autoprefixer', { grid: 'autoplace' }]
+                                    ['postcss-preset-env', {}],
+                                    ['autoprefixer', {
+                                        grid: 'autoplace'
+                                    }]
                                 ]
                             }
                         }
@@ -79,11 +83,23 @@ export default {
             },
             {
                 test: /\.(png|jpe?g|gif|svg)$/i,
-                type: 'asset/resource',
-                generator: {
-                    filename: '[name][ext]'
-                }
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            emitFile: false,
+                            esModule: false
+                        }
+                    }
+                ]
             }
         ]
-    }
-};
+    },
+    ignoreWarnings: [
+        {
+            module: /sass\.dart\.js/,
+            message: /Critical dependency: require function is used in a way in which dependencies cannot be statically extracted/
+        }
+    ]
+}
