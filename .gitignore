@@ -25,3 +25,4 @@ dist-ssr
 
 # NEW
 package-lock.json
+.shopify
