@@ -1,8 +1,3 @@
 @use '../variables.scss' as *;
-@use '../mixins/global-mixins.scss' as *;
-
-.footer {
-    width: 100%;
-    padding: 50px 25px;
-    background-color: gray;
-}
+@use '../mixins/_global-mixins.scss' as *;
+//=====================================================================================================================

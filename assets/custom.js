@@ -10,23 +10,23 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/styles/ui-components.scss":
-/*!***************************************!*\
-  !*** ./src/styles/ui-components.scss ***!
-  \***************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ "./src/scripts/custom.js":
+/*!*******************************!*\
+  !*** ./src/scripts/custom.js ***!
+  \*******************************/
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://project_name/./src/styles/ui-components.scss?");
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_custom_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/custom.scss */ \"./src/styles/custom.scss\");\n\n//=====================================================================================================================\n\n//# sourceURL=webpack://project_name/./src/scripts/custom.js?\n}");
 
 /***/ }),
 
-/***/ "./src/scripts/sections/ui-components.js":
-/*!***********************************************!*\
-  !*** ./src/scripts/sections/ui-components.js ***!
-  \***********************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+/***/ "./src/styles/custom.scss":
+/*!********************************!*\
+  !*** ./src/styles/custom.scss ***!
+  \********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_ui_components_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../styles/ui-components.scss */ \"./src/styles/ui-components.scss\");\n\n\n//# sourceURL=webpack://project_name/./src/scripts/sections/ui-components.js?");
+eval("{__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://project_name/./src/styles/custom.scss?\n}");
 
 /***/ })
 
@@ -73,7 +73,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/scripts/sections/ui-components.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/scripts/custom.js");
 /******/ 	
 /******/ })()
 ;

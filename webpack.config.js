@@ -4,21 +4,18 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import * as sass from 'sass';
-
 //=====================================================================================================================
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const entriesObject = {};
-entriesObject['application'] = _resolve(__dirname, 'src/scripts/application.js');
+entriesObject['custom'] = _resolve(__dirname, 'src/scripts/custom.js');
 readdirSync('./src/scripts/sections', { withFileTypes: true }).forEach(file => {
     if (file.isFile()) {
         const name = path.parse(file.name).name;
         entriesObject[name] = _resolve(__dirname, `src/scripts/sections/${file.name}`);
     }
 });
-
 //=====================================================================================================================
 
 export default {

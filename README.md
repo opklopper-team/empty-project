@@ -1,10 +1,10 @@
-### How to install project
+## How to install project
 1) ``` git clone https://github.com/opklopper-team/empty-project.git . ```  
 2) ``` git checkout -b yourBranchName ```  
 3) ``` npm install ``` or ``` npm i ```
 
-### Project terminal commands
-Use shopify the dev command to run shopify dev server (without live reload)
+## Project terminal commands
+Use shopify the dev command to run shopify dev server (without live reload)  
 ``` shopify theme dev --live-reload=off -s opklopperteststore1.myshopify.com ```
 
 Start gulp and webpack watcher (for building sass files to css and js files to minimized version):  
@@ -17,28 +17,33 @@ To watch for all changes in css and js files in DEV mode use this command:
 To watch for all changes in css and js files in BUILD mode use this command:  
 ``` npm run watchBUILD ```
 
-### How we run the project for develop
+## How we run the project for develop
 We use 3 console windows (for shopify cli, npm watcher and github merges).  
 These two commands is enought for comfortable work:  
-1) ``` shopify theme dev --live-reload=off -s opklopperteststore1.myshopify.com ``` - for watch scss and js files in DEV mode
-2) ``` npm run watch ``` - for watch scss and js files in DEV mode
-2) ``` npm run watchBUILD ``` - for watch scss and js files in BUILD mode
+1) ``` shopify theme dev --live-reload=off -s opklopperteststore1.myshopify.com ``` - for watch scss and js files in DEV mode (with sudo in unix systems);
+2) ``` npm run watch ``` - for watch scss and js files in DEV mode, or use ``` npm run watchBUILD ``` - for watch scss and js files in BUILD mode;
 
-### What is new in structure?
-## src folder
+## What is new in structure?
+### src folder
 In this folder you can find ScSS style and JavaScript files.  
 This is an entrypoint of all styles and scripts on project.  
 It makes simmilar as Shopify structure.
 
-## custom.scss
+### custom.scss
 This is the main css file of all aplication.  
 Here we write all classes or include some components that was used in all pages.
 
-## variables.scss
+### variables.scss
 In this file we save all variables (like color or layout).  
 Import this file in every section file (he knows what to take, so don't be scary about performance).
 
-### How to name your commits
+### fornts.scss
+To add a new font or font variant just add a new line with next structure:   
+``` @include font_face('Arial-Regular', 'Arial', 400); ```     
+And import this file in every section file (he knows what to take, so don't be scary about performance).
+Add needed files with fonts to assets folder. The next types needed: truetype, woff, woff2.
+
+## How to name your commits
 To give for your comments some logic and structure you can use this prefixes and beggin your commit from them.
 All prefixes:
 - ```new:``` - if something new (default).
