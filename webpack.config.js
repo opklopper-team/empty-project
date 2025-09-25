@@ -4,7 +4,9 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import * as sass from 'sass';
+
 //=====================================================================================================================
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -16,6 +18,7 @@ readdirSync('./src/scripts/sections', { withFileTypes: true }).forEach(file => {
         entriesObject[name] = _resolve(__dirname, `src/scripts/sections/${file.name}`);
     }
 });
+
 //=====================================================================================================================
 
 export default {
@@ -49,25 +52,27 @@ export default {
                 test: /\.(sa|sc|c)ss$/,
                 use: [
                     MiniCssExtractPlugin.loader,
-                    'css-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            url: false,
+                            importLoaders: 2
+                        }
+                    },
                     {
                         loader: 'postcss-loader',
                         options: {
                             postcssOptions: {
                                 plugins: [
                                     ['postcss-preset-env', {}],
-                                    ['autoprefixer', {
-                                        grid: 'autoplace'
-                                    }]
+                                    ['autoprefixer', { grid: 'autoplace' }]
                                 ]
                             }
                         }
                     },
                     {
                         loader: 'sass-loader',
-                        options: {
-                            implementation: sass
-                        }
+                        options: { implementation: sass }
                     }
                 ]
             },
