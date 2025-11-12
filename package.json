@@ -27,6 +27,6 @@
     "browserslist": [
         "last 2 version",
         "not dead",
-        "iOS >= 14"
+        "iOS >= 15"
     ]
 }
