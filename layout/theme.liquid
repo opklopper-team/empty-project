@@ -42,7 +42,7 @@
 
 	{% render 'social-meta-tags' %}
 
-	{% render 'variables' %}
+	{% comment %} {% render 'variables' %} {% endcomment %}
 	<link rel="stylesheet" href="{{ 'opk-custom.css' | asset_url }}" type="text/css">
 
 	{{ content_for_header }}

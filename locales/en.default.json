@@ -1,0 +1,12 @@
+{
+  "general": {
+    "language": "Language",
+    "currency": "Currency",
+    "previous": "Previous",
+    "next": "Next",
+    "slider_navigation": "Slider navigation",
+    "breadcrumbs": {
+      "home": "Home"
+    }
+  }
+}
