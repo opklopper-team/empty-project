@@ -5,13 +5,14 @@ import { fileURLToPath } from 'url';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import * as sass from 'sass';
 
-//=====================================================================================================================
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// ENTRY
 const entriesObject = {};
-entriesObject['custom'] = _resolve(__dirname, 'src/scripts/custom.js');
+
+entriesObject['opk-custom'] = _resolve(__dirname, 'src/scripts/opk-custom.js');
+
 readdirSync('./src/scripts/sections', { withFileTypes: true }).forEach(file => {
     if (file.isFile()) {
         const name = path.parse(file.name).name;
@@ -19,21 +20,25 @@ readdirSync('./src/scripts/sections', { withFileTypes: true }).forEach(file => {
     }
 });
 
-//=====================================================================================================================
-
 export default {
     resolve: {
         extensions: ['.js'],
     },
+
     entry: entriesObject,
+
     output: {
         path: path.resolve(__dirname, 'assets'),
         filename: '[name].js'
     },
-    plugins: [new MiniCssExtractPlugin({
-        filename: '[name].css',
-        chunkFilename: '[id].css'
-    })],
+
+    plugins: [
+        new MiniCssExtractPlugin({
+            filename: '[name].css',
+            chunkFilename: '[id].css'
+        })
+    ],
+
     module: {
         rules: [
             {
@@ -42,9 +47,7 @@ export default {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: [
-                            ['@babel/preset-env', { targets: "defaults" }]
-                        ]
+                        presets: [['@babel/preset-env', { targets: "defaults" }]]
                     }
                 }
             },
@@ -52,14 +55,8 @@ export default {
                 test: /\.(sa|sc|c)ss$/,
                 use: [
                     MiniCssExtractPlugin.loader,
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            url: false,
-                            importLoaders: 2
-                        }
-                    },
-                    {
+                    { loader: 'css-loader', options: { url: false, importLoaders: 2 } },
+                    { 
                         loader: 'postcss-loader',
                         options: {
                             postcssOptions: {
@@ -70,17 +67,14 @@ export default {
                             }
                         }
                     },
-                    {
-                        loader: 'sass-loader',
-                        options: { implementation: sass }
-                    }
+                    { loader: 'sass-loader', options: { implementation: sass } }
                 ]
             },
             {
                 test: /\.(woff(2)?|ttf|eot)$/,
                 type: 'asset/resource',
-                generator: {
-                    filename: '[name][ext]'
+                generator: { 
+                    filename: '[name][ext]' 
                 }
             },
             {
@@ -98,6 +92,7 @@ export default {
             }
         ]
     },
+
     ignoreWarnings: [
         {
             module: /sass\.dart\.js/,
