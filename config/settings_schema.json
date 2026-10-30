@@ -29,7 +29,7 @@
 				"max": 1920,
 				"step": 20,
 				"unit": "px",
-				"default": 1440,
+				"default": 1440
 			}
 		]
 	},
