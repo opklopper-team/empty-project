@@ -3,7 +3,7 @@ import { join, extname } from "node:path";
 
 const DIRS = ["config", "locales", "sections", "templates", "blocks", "snippets"];
 
-const walk = (dir) => {
+function walk(dir) {
 	let files = [];
 	let entries;
 
@@ -20,12 +20,12 @@ const walk = (dir) => {
 	}
 
 	return files;
-};
+}
 
 let failed = false;
 
 for (const file of DIRS.flatMap(walk)) {
-	let text = readFileSync(file, "utf8");
+	const text = readFileSync(file, "utf8");
 	const stripped = text.replace(/^\s*\/\*[\s\S]*?\*\/\s*/, "");
 
 	try {
@@ -39,7 +39,7 @@ for (const file of DIRS.flatMap(walk)) {
 			const before = stripped.slice(0, Number(m[1]));
 			const line = before.split("\n").length;
 			const col = before.length - before.lastIndexOf("\n");
-			where = ` (рядок ${line}, колонка ${col})`;
+			where = ` (line ${line}, column ${col})`;
 		}
 
 		console.error(`::error file=${file}::${e.message}${where}`);
