@@ -1,0 +1,14 @@
+{
+    "plugins": ["@shopify/prettier-plugin-liquid"],
+    "tabWidth": 4,
+    "useTabs": true,
+    "printWidth": 150,
+    "overrides": [
+        {
+            "files": ["*.json", "*.jsonc"],
+            "options": {
+                "requirePragma": true
+            }
+        }
+    ]
+}

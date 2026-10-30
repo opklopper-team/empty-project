@@ -10,16 +10,6 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/scripts/sections/footer.js":
-/*!****************************************!*\
-  !*** ./src/scripts/sections/footer.js ***!
-  \****************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
-
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_sections_footer_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../styles/sections/footer.scss */ \"./src/styles/sections/footer.scss\");\n\n//=====================================================================================================================\n\n//# sourceURL=webpack://project_name/./src/scripts/sections/footer.js?\n}");
-
-/***/ }),
-
 /***/ "./src/styles/sections/footer.scss":
 /*!*****************************************!*\
   !*** ./src/styles/sections/footer.scss ***!
@@ -27,6 +17,16 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _st
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 eval("{__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://project_name/./src/styles/sections/footer.scss?\n}");
+
+/***/ }),
+
+/***/ "./src/scripts/sections/footer.js":
+/*!****************************************!*\
+  !*** ./src/scripts/sections/footer.js ***!
+  \****************************************/
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_sections_footer_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../styles/sections/footer.scss */ \"./src/styles/sections/footer.scss\");\n\n\n//# sourceURL=webpack://project_name/./src/scripts/sections/footer.js?\n}");
 
 /***/ })
 
@@ -50,6 +50,12 @@ eval("{__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-ext
 /******/ 		};
 /******/ 	
 /******/ 		// Execute the module function
+/******/ 		if (!(moduleId in __webpack_modules__)) {
+/******/ 			delete __webpack_module_cache__[moduleId];
+/******/ 			var e = new Error("Cannot find module '" + moduleId + "'");
+/******/ 			e.code = 'MODULE_NOT_FOUND';
+/******/ 			throw e;
+/******/ 		}
 /******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
 /******/ 	
 /******/ 		// Return the exports of the module
@@ -58,15 +64,13 @@ eval("{__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-ext
 /******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/make namespace object */
-/******/ 	!function() {
-/******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = function(exports) {
-/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 			}
-/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 		};
-/******/ 	}();
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
 /******/ 	
 /************************************************************************/
 /******/ 	

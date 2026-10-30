@@ -19,15 +19,15 @@
 
 	{% capture seo_title %}
 		{% if request.page_type == 'search' and search.performed == true %}
-			{{ count: search.results_count }}: {{ terms: search.terms, count: search.results_count }}
+			{{ search.results_count }} results for "{{ search.terms }}"
 		{% else %}
 			{{ page_title }}
 		{% endif %}
 		{% if current_tags %}
-			{% assign meta_tags = current_tags | join: ', ' %} &ndash; {{ tags: meta_tags }}
+			{% assign meta_tags = current_tags | join: ', ' %} &ndash; {{ meta_tags }}
 		{% endif %}
 		{% if current_page != 1 %}
-			&ndash; {{ page: current_page }}
+			&ndash; Page {{ current_page }}
 		{% endif %}
 		{% assign escaped_page_title = page_title | escape %}
 		{% unless escaped_page_title contains shop.name %}
@@ -43,15 +43,7 @@
 	{% render 'social-meta-tags' %}
 
 	{% render 'variables' %}
-	<link rel="stylesheet" href="{{ 'application.css' | asset_url }}" type="text/css">
-
-	<script>
-		document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
-	</script>
-
-	{% comment %} {% if request.page_type contains 'customers/' %}
-		<script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer="defer"></script>
-	{% endif %} {% endcomment %}
+	<link rel="stylesheet" href="{{ 'opk-custom.css' | asset_url }}" type="text/css">
 
 	{{ content_for_header }}
 </head>
@@ -60,6 +52,6 @@
 	<main class="main" role="main">{{ content_for_layout }}</main>
 	{% sections 'footer-group' %}
 
-	<script src="{{ 'application.js' | asset_url }}" defer="defer"></script>
+	<script src="{{ 'opk-custom.js' | asset_url }}" defer="defer"></script>
 </body>
 </html>
